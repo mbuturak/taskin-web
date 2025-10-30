@@ -1679,6 +1679,20 @@ i.ri-star-fill {
 
 /* All New Style Here End  */
 
+/* About section: remove animated vertical bar between image and text */
+.no-anim-bar .about-thumb2:after {
+  display: none !important;
+  content: none !important;
+  animation: none !important;
+}
+
+/* About page paragraph mobile adjustment */
+@media (max-width: 575px) {
+  .about-area-2 .about-desc {
+    font-size: 14px !important;
+  }
+}
+
 
 
 

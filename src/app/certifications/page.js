@@ -102,7 +102,7 @@ export default function AboutPage() {
     return (
         <div style={{ overflow: 'hidden' }}>
             <HeaderFour />
-            <Breadcumb title="CERTIFICATIONS" bgImage="/main-assets/image/about-bg.jpg" />
+            <Breadcumb title="CERTIFICATIONS" bgImage="/main-assets/image/certifications.jpg" />
             <section className="blog-area space-top space-extra-bottom">
                 <div className="container">
                     <div className="row gy-4 justify-content-center">

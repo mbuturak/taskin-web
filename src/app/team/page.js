@@ -72,12 +72,13 @@ export default function TeamPage() {
                         <div key={item.name} className="service-card style2 mb-5" style={{ background: '#fff', borderRadius: '8px', padding: '10px', marginTop: '25px' }}>
                             <div className="row align-items-start">
                                 {/* Image always on the left */}
-                                <div className="col-md-8">
+                                <div className="col-md-8 team-image-col">
                                     <Image
                                         src={item.image || "/main-assets/image/logo.svg"}
                                         alt={item.name}
                                         width={1000}
                                         height={1000}
+                                        className="team-card-img"
                                         style={{ 
                                             width: '100%', 
                                             objectFit: item.image ? 'cover' : 'contain', 
@@ -114,6 +115,11 @@ export default function TeamPage() {
                 .service-card.style2 .service-card_text { color: #6B7280 !important; }
                 .service-card.style2:hover .service-card_title a { color: #0F172A !important; }
                 .service-card.style2:hover .service-card_text { color: #6B7280 !important; }
+                /* Center image column and image on small screens */
+                @media (max-width: 575px) {
+                  .team-image-col { display: flex; justify-content: center; }
+                  .team-card-img { height: auto !important; max-width: 100%; margin: 0 auto; }
+                }
             `}</style>
         </>
     );

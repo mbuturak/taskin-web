@@ -23,7 +23,7 @@ export default function AboutPage() {
     return (
         <div style={{ overflow: 'hidden' }}>
             <HeaderFour />
-            <Breadcumb title="TRAINING CENTER" bgImage="/main-assets/image/about-bg.jpg" />
+            <Breadcumb title="TRAINING CENTER" bgImage="/main-assets/image/tc.jpg" bgPosition="center 71%"/>
             <Facilities />
             <Client />
             <FooterThree />

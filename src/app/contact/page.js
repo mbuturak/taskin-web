@@ -22,13 +22,13 @@ export default function ContactPage() {
         <div style={{ overflow: 'hidden' }}>
             <HeaderFour />
             {/* Görseli yukarı kaydırmak için background-position Y eksenini %20 yap ve biraz zoom-out */}
-            <Breadcumb 
-                title="CONTACT US" 
-                bgImage="/main-assets/image/contact.jpeg" 
-                bgPosition="center 64%" 
-                
+            <Breadcumb
+                title="CONTACT US"
+                bgImage="/main-assets/image/contact.jpeg"
+                bgPosition="center 64%"
+
             />
-            
+
             {/* Contact Introduction Section */}
             <div className="contact-area-2 space-top overflow-hidden">
                 <div className="container">
@@ -36,13 +36,14 @@ export default function ContactPage() {
                         <div className="col-xl-8">
                             <div className="title-area text-center mb-40">
                                 <p className="sec-text" style={{ lineHeight: '1.5', textAlign: 'center' }}>
-                                    We&apos;re here to help! Whether you need inspection, maintenance, or calibration services for your marine safety equipment, our team is ready to assist you. 
+                                    We're here to help! Whether you need inspection, maintenance, or calibration services for your marine safety equipment, our team is ready to assist you.
+                                    <br />
                                     Contact us through the form below or reach out to one of our global offices.
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <ContactForm theme="light" />                  
+                    <ContactForm theme="light" />
                 </div>
             </div>
             <FooterThree />

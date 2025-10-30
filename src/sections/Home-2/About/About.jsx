@@ -3,7 +3,7 @@ import Link from "next/link";
 import CountUp from "react-countup";
 const About = () => {
     return (
-        <div className="about-area-2 space overflow-hidden shape-mockup-wrap" id="about-sec">
+        <div className="about-area-2 space overflow-hidden shape-mockup-wrap no-anim-bar" id="about-sec">
             <div className="container">
                 <div className="row gx-60 align-items-center flex-row-reverse">
                     <div className="col-xl-6">

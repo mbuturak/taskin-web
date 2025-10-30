@@ -32,6 +32,7 @@ const officeLocations = [
 const ContactForm = ({theme = 'light'}) => {
   const [formData, setFormData] = useState({
     fullName: '',
+    title: '',
     company: '',
     location: '',
     email: '',
@@ -111,6 +112,7 @@ const ContactForm = ({theme = 'light'}) => {
         setSubmitStatus('success');
         setFormData({
           fullName: '',
+          title: '',
           company: '',
           location: '',
           email: '',
@@ -132,8 +134,7 @@ const ContactForm = ({theme = 'light'}) => {
     <div className="contact-form-container" style={containerStyle}>
       <form onSubmit={handleSubmit} className="contact-form">
         <div className="form-row" style={{ display: 'flex', gap: '15px', marginBottom: '15px' }}>
-          
-          <div className="form-group" style={{ flex: 1 }}>
+          <div className="form-group" style={{ flex: '1 1 50%' }}>
             <label htmlFor="fullName" style={labelStyle}>
               Full name *
             </label>
@@ -147,6 +148,22 @@ const ContactForm = ({theme = 'light'}) => {
               style={inputStyle}
               onFocus={(e) => e.target.style.borderColor = '#3B82F6'}
               onBlur={(e) => e.target.style.borderColor = '#d1d5db'}
+            />
+          </div>
+          <div className="form-group" style={{ flex: '1 1 50%' }}>
+            <label htmlFor="title" style={labelStyle}>
+              Title
+            </label>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              value={formData.title}
+              onChange={handleInputChange}
+              style={inputStyle}
+              onFocus={(e) => e.target.style.borderColor = '#3B82F6'}
+              onBlur={(e) => e.target.style.borderColor = '#d1d5db'}
+              placeholder="e.g., Sales Manager"
             />
           </div>
         </div>
@@ -179,8 +196,30 @@ const ContactForm = ({theme = 'light'}) => {
               value={formData.location}
               onChange={handleInputChange}
               style={{
+                // taban
                 ...inputStyle,
-                cursor: 'pointer'
+            
+                // dikey hizalamayı düzelt
+                height: 44,                 // sabit yükseklik
+                padding: '0 12px',          // üst/alt 0: metin ortalanır
+                lineHeight: '44px',         // (çoğu tarayıcıda) metni ortalar
+                boxSizing: 'border-box',
+            
+                // tarayıcı varsayılanlarını sıfırla
+                appearance: 'none',
+                WebkitAppearance: 'none',
+                MozAppearance: 'none',
+            
+                // imleç ve renkler
+                cursor: 'pointer',
+                color: formData.location ? '#1f2937' : '#6b7280',
+            
+                // ok ikonu (gerekirse)
+                backgroundImage:
+                  `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 20 20' fill='none' stroke='gray' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 8 10 12 14 8'/></svg>")`,
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'right 10px center',
+                backgroundOrigin: 'content-box'
               }}
               onFocus={(e) => e.target.style.borderColor = '#3B82F6'}
               onBlur={(e) => e.target.style.borderColor = '#d1d5db'}

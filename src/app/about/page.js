@@ -40,7 +40,7 @@ export default function AboutPage() {
                                 <h2 className="sec-title">
                                     Your Safety, Our Priority
                                 </h2>
-                                <p className="sec-text" style={{ lineHeight: '1.5',textAlign: 'justify' }}>
+                                <p className="sec-text about-desc" style={{ lineHeight: '1.5',textAlign: 'justify' }}>
                                     We are a dedicated company, specializing in inspection, maintenance, and calibration services for marine safety equipment. Our team is committed to delivering fast, regulation-compliant service with a focus on operational reliability and environmental responsibility.
 
                                     Our Head Office in Rotterdam, Netherlands, we have fully operational branches in Finland, Germany and USA. With our dynamic team, we provide services in over 60 ports across Europe, the Baltics, the U.S., and more.
