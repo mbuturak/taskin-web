@@ -621,7 +621,7 @@ textPath {
 }
 
 .ril__navButtonNext {
-  background: transparent !important;
+  /* background: transparent !important; */
 }
 
 @media only screen and (min-width: 1200px) {
@@ -1663,47 +1663,8 @@ i.ri-star-fill {
 }
 
 .header-underline .header-layout1 .header-top {
+
   border-bottom: 1px solid transparent !important;
-}
-
-/* iPad için header düzenlemeleri */
-@media (min-width: 768px) and (max-width: 1399px) {
-  /* iPad'de logo ve menü düzgün hizalansın */
-  .header-layout2 .container {
-    position: relative;
-  }
-  
-  .header-layout2 .header-navbar-logo {
-    display: block !important;
-    position: absolute !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    left: 0 !important;
-    padding-left: 15px !important;
-    margin-top: 0 !important;
-    z-index: 3 !important;
-  }
-  
-  .header-layout2 .main-menu {
-    margin-left: 190px !important;
-  }
-  
-  /* iPad'de slogan boyutunu küçült */
-  .header-slogan img {
-    max-width: 340px !important;
-  }
-}
-
-/* Slogan için responsive ayarlar */
-.header-slogan {
-  pointer-events: none;
-}
-
-/* Daha küçük ekranlarda slogan gizle */
-@media (max-width: 767px) {
-  .header-slogan {
-    display: none !important;
-  }
 }
 
 

@@ -42,25 +42,15 @@ const HeaderFour = () => {
 
     // Determine slogan image size per breakpoints; keep aspect ratio of original 385x50
     const computeSloganWidth = () => {
-        if (viewportWidth < 576) return 280;
-        if (viewportWidth < 768) return 300;
+        if (viewportWidth < 576) return 330;
+        if (viewportWidth < 768) return 250;
         if (viewportWidth < 992) return 320;
-        if (viewportWidth < 1200) return 340;  // iPad için
         return 385;
-    };
-    
-    // Determine logo size for different viewports
-    const computeLogoSize = () => {
-        if (viewportWidth >= 992 && viewportWidth < 1400) {
-            return { width: 120, height: 77 };  // iPad için daha küçük logo
-        }
-        return { width: 155, height: 100 };  // Desktop için normal boyut
     };
     
     const sloganWidth = computeSloganWidth();
     const sloganHeight = Math.round(sloganWidth * 50 / 385);
     const sloganRight = viewportWidth < 576 ? 0 : 20;
-    const logoSize = computeLogoSize();
 
 
     const handleMobileMenuOpen = () => {
@@ -91,7 +81,7 @@ const HeaderFour = () => {
                     <div className="menu-area" style={{ position: 'relative', padding: '15px 0' }}>
                         {/* Keep logo centered vertically in sticky state */}
                         <div className="header-navbar-logo d-none d-lg-block" style={headerLogoStyle}>
-                            <Link href="/"> <Image src="/main-assets/image/logo.svg" alt="logo" width={logoSize.width} height={logoSize.height} /></Link>
+                            <Link href="/"> <Image src="/main-assets/image/logo.svg" alt="logo" width={155} height={100} /></Link>
                         </div>
                         {/* Slogan positioned in top-right corner; right offset adapts on mobile */}
                         <div className="header-slogan" style={{ position: 'absolute', top: '25px', right: sloganRight, zIndex: 1000, pointerEvents: 'none' }}>
