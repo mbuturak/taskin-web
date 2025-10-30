@@ -177,7 +177,7 @@ const Locations = () => {
               </g>
             </svg>
           `),
-          scaledSize: new Size(36, 36),
+          scaledSize: new Size(48, 48),
           // Anchor at the tip of the pin
           anchor: new window.google.maps.Point(18, 36)
         }

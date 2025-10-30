@@ -84,7 +84,7 @@ const HeaderFour = () => {
                             <Link href="/"> <Image src="/main-assets/image/logo.svg" alt="logo" width={155} height={100} /></Link>
                         </div>
                         {/* Slogan positioned in top-right corner; right offset adapts on mobile */}
-                        <div className="header-slogan" style={{ position: 'absolute', top: '25px', right: sloganRight, zIndex: 1000 }}>
+                        <div className="header-slogan" style={{ position: 'absolute', top: '25px', right: sloganRight, zIndex: 1000, pointerEvents: 'none' }}>
                             {/* Slogan uses responsive width and proportional height */}
                             <Image src="/main-assets/image/slogan.png" alt="slogan" width={sloganWidth} height={sloganHeight} />
                         </div>
