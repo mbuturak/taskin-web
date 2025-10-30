@@ -1693,6 +1693,41 @@ i.ri-star-fill {
   }
 }
 
+/* Header responsive fix for logo/slogan overlap */
+/* Hide header logo between 992px and 1500px to prevent overlap with slogan */
+@media (min-width: 992px) and (max-width: 1499px) {
+  .header-navbar-logo {
+    display: none !important;
+  }
+  
+  /* Hide logo background line when logo is hidden */
+  .header-layout2 .menu-area .logo-bg {
+    display: none !important;
+  }
+  
+  /* Adjust menu positioning when logo is hidden */
+  .header-layout2 .main-menu {
+    margin-left: 0 !important;
+  }
+}
+
+/* Hide header logo between 1501px and 1850px to prevent overlap with "HOME" text */
+@media (min-width: 1501px) and (max-width: 1850px) {
+  .header-navbar-logo {
+    display: none !important;
+  }
+  
+  /* Hide logo background line when logo is hidden */
+  .header-layout2 .menu-area .logo-bg {
+    display: none !important;
+  }
+  
+  /* Adjust menu positioning when logo is hidden */
+  .header-layout2 .main-menu {
+    margin-left: 0 !important;
+  }
+}
+
 
 
 

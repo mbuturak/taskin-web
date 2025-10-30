@@ -13,7 +13,10 @@ export async function POST(request) {
       message, 
       consent,
       toEmail,
-      locationName
+      ccEmail,
+      locationName,
+      emailHtml,
+      subject
     } = body;
 
     // Validate required fields
@@ -24,21 +27,25 @@ export async function POST(request) {
       );
     }
 
-    // Create transporter
-    const transporter = nodemailer.createTransporter({
+    // E-posta taşıyıcı (gerekirse havuzlamak için minimal konfig)
+    const transporter = nodemailer.createTransport({
       host: process.env.NEXT_PUBLIC_SMTP_HOST,
       port: parseInt(process.env.NEXT_PUBLIC_SMTP_PORT),
       secure: process.env.NEXT_PUBLIC_SMTP_SECURE === 'true',
+      requireTLS: true,
       auth: {
         user: process.env.NEXT_PUBLIC_SMTP_USER,
         pass: process.env.NEXT_PUBLIC_SMTP_PASS,
       },
     });
 
+    // Verify connection configuration (will throw on failure)
+    await transporter.verify();
+
     // Email content
-    const emailSubject = `New Contact Form Submission - General Inquiry`;
+    const emailSubject = subject || `New Contact Form Submission - General Inquiry`;
     
-    const emailContent = `
+    const emailContent = emailHtml || `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #3B82F6; border-bottom: 2px solid #3B82F6; padding-bottom: 10px;">
           New Contact Form Submission
@@ -71,14 +78,14 @@ export async function POST(request) {
       </div>
     `;
 
-    // Send email
+    // Tek alıcı (TO) ve opsiyonel CC ile gönder
     const mailOptions = {
       from: {
         name: process.env.NEXT_PUBLIC_FROM_NAME || 'TaskIn Maritime',
         address: process.env.NEXT_PUBLIC_FROM_EMAIL || 'noreply@ossifybio.com'
       },
       to: toEmail,
-      cc: process.env.NEXT_PUBLIC_FROM_EMAIL, // Always CC headquarters
+      cc: ccEmail || undefined,
       subject: emailSubject,
       html: emailContent,
     };
