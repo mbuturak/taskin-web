@@ -65,6 +65,7 @@ const Locations = () => {
   const infoWindowRef = useRef(null);
 
   // Google Maps yükleme
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     // API key kontrolü
     const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;

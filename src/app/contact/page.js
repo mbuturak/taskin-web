@@ -36,7 +36,7 @@ export default function ContactPage() {
                         <div className="col-xl-8">
                             <div className="title-area text-center mb-40">
                                 <p className="sec-text" style={{ lineHeight: '1.5', textAlign: 'center' }}>
-                                    We're here to help! Whether you need inspection, maintenance, or calibration services for your marine safety equipment, our team is ready to assist you.
+                                    We&apos;re here to help! Whether you need inspection, maintenance, or calibration services for your marine safety equipment, our team is ready to assist you.
                                     <br />
                                     Contact us through the form below or reach out to one of our global offices.
                                 </p>

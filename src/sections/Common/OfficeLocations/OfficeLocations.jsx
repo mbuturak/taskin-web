@@ -65,6 +65,7 @@ const OfficeLocations = () => {
   const infoWindowRef = useRef(null);
 
   // Google Maps loading
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     // Set API key
     setOptions({
