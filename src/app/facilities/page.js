@@ -4,7 +4,6 @@ import FooterThree from "~/sections/Common/Footer/FooterThree";
 import Scroll from "~/sections/Common/Scroll";
 import Facilities from "./facilities";
 import Client from "~/sections/Home-5-op/Client/Client";
-import Service from "~/sections/Home-2/Service";
 
 
 import "~/public/landing-assets/css/animate.css";

@@ -1,6 +1,7 @@
 "use client";
 
 import Slider from "react-slick";
+import Image from "next/image";
 
 const TestimonialTwo = () => {
   const settings = {
@@ -28,17 +29,17 @@ const TestimonialTwo = () => {
         <div className="row justify-content-between">
           <div className="col-lg-7 testimonial-extra-padding">
             <div className="title-area text-lg-start text-center services-title-area testimonial-area-bottom-space-row content-text-extra-style service-testimonial-align">
-              <span class="sub-title">
-                <img src="/main-assets/img/icon/section-subtitle-icon.svg" alt="" />
+              <span className="sub-title">
+                <Image src="/main-assets/img/icon/section-subtitle-icon.svg" alt="" width={24} height={24} />
                 Testimonials
               </span>
-              <h2 class="sec-title">What client saying about us</h2>
+              <h2 className="sec-title">What client saying about us</h2>
             </div>
           </div>
           <div className="col-lg-auto">
             <div className="sec-btn btn-wrap">
               <div className="client-group-thumb">
-                <img src="/main-assets/img/normal/client_group_1-2.png" alt="img" />
+                <Image src="/main-assets/img/normal/client_group_1-2.png" alt="img" width={160} height={48} />
               </div>
               <div className="testi-counter-wrap">
                 <h3 className="testi-counter-number">
@@ -66,7 +67,7 @@ const TestimonialTwo = () => {
           <div className="col-lg-4">
             <div className="testi-card style3 client-click-slider-gap">
               <div className="testi-card-thumb">
-                <img src="/main-assets/img/testimonial/testi_2_2.png" alt="img" />
+                <Image src="/main-assets/img/testimonial/testi_2_2.png" alt="img" width={80} height={80} />
                 <div className="media-body">
                   <h4 className="testi-card_title">Best Construction!</h4>
                   <div className="testi-card_review">
@@ -89,7 +90,7 @@ const TestimonialTwo = () => {
                 </div>
               </div>
               <div className="quote-icon">
-                <img src="/main-assets/img/icon/quote3.svg" alt="img" />
+                <Image src="/main-assets/img/icon/quote3.svg" alt="img" width={24} height={24} />
               </div>
             </div>
           </div>
@@ -98,7 +99,7 @@ const TestimonialTwo = () => {
           <div className="col-lg-4">
             <div className="testi-card style3 client-click-slider-gap">
               <div className="testi-card-thumb">
-                <img src="/main-assets/img/testimonial/testi_2_3.png" alt="img" />
+                <Image src="/main-assets/img/testimonial/testi_2_3.png" alt="img" width={80} height={80} />
                 <div className="media-body">
                   <h4 className="testi-card_title">Good Services!</h4>
                   <div className="testi-card_review">
@@ -121,7 +122,7 @@ const TestimonialTwo = () => {
                 </div>
               </div>
               <div className="quote-icon">
-                <img src="/main-assets/img/icon/quote3.svg" alt="img" />
+                <Image src="/main-assets/img/icon/quote3.svg" alt="img" width={24} height={24} />
               </div>
             </div>
           </div>
@@ -130,7 +131,7 @@ const TestimonialTwo = () => {
           <div className="col-lg-4">
             <div className="testi-card style3 client-click-slider-gap">
               <div className="testi-card-thumb">
-                <img src="/main-assets/img/testimonial/testi_2_1.png" alt="img" />
+                <Image src="/main-assets/img/testimonial/testi_2_1.png" alt="img" width={80} height={80} />
                 <div className="media-body">
                   <h4 className="testi-card_title">Best Company!</h4>
                   <div className="testi-card_review">
@@ -153,7 +154,7 @@ const TestimonialTwo = () => {
                 </div>
               </div>
               <div className="quote-icon">
-                <img src="/main-assets/img/icon/quote3.svg" alt="img" />
+                <Image src="/main-assets/img/icon/quote3.svg" alt="img" width={24} height={24} />
               </div>
             </div>
           </div>
@@ -162,7 +163,7 @@ const TestimonialTwo = () => {
           <div className="col-lg-4">
             <div className="testi-card style3 client-click-slider-gap">
               <div className="testi-card-thumb">
-                <img src="/main-assets/img/testimonial/testi_2_2.png" alt="img" />
+                <Image src="/main-assets/img/testimonial/testi_2_2.png" alt="img" width={80} height={80} />
                 <div className="media-body">
                   <h4 className="testi-card_title">Best Construction!</h4>
                   <div className="testi-card_review">
@@ -185,7 +186,7 @@ const TestimonialTwo = () => {
                 </div>
               </div>
               <div className="quote-icon">
-                <img src="/main-assets/img/icon/quote3.svg" alt="img" />
+                <Image src="/main-assets/img/icon/quote3.svg" alt="img" width={24} height={24} />
               </div>
             </div>
           </div>
@@ -194,7 +195,7 @@ const TestimonialTwo = () => {
           <div className="col-lg-4">
             <div className="testi-card style3 client-click-slider-gap">
               <div className="testi-card-thumb">
-                <img src="/main-assets/img/testimonial/testi_2_3.png" alt="img" />
+                <Image src="/main-assets/img/testimonial/testi_2_3.png" alt="img" width={80} height={80} />
                 <div className="media-body">
                   <h4 className="testi-card_title">Good Services!</h4>
                   <div className="testi-card_review">
@@ -217,7 +218,7 @@ const TestimonialTwo = () => {
                 </div>
               </div>
               <div className="quote-icon">
-                <img src="/main-assets/img/icon/quote3.svg" alt="img" />
+                <Image src="/main-assets/img/icon/quote3.svg" alt="img" width={24} height={24} />
               </div>
             </div>
           </div>
@@ -226,7 +227,7 @@ const TestimonialTwo = () => {
           <div className="col-lg-4">
             <div className="testi-card style3 client-click-slider-gap">
               <div className="testi-card-thumb">
-                <img src="/main-assets/img/testimonial/testi_2_1.png" alt="img" />
+                <Image src="/main-assets/img/testimonial/testi_2_1.png" alt="img" width={80} height={80} />
                 <div className="media-body">
                   <h4 className="testi-card_title">Best Company!</h4>
                   <div className="testi-card_review">
@@ -249,7 +250,7 @@ const TestimonialTwo = () => {
                 </div>
               </div>
               <div className="quote-icon">
-                <img src="/main-assets/img/icon/quote3.svg" alt="img" />
+                <Image src="/main-assets/img/icon/quote3.svg" alt="img" width={24} height={24} />
               </div>
             </div>
           </div>

@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import React, { useEffect, useState } from 'react';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
+import Image from 'next/image';
 
 const Facilities = () => {
     const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -139,7 +140,7 @@ const Facilities = () => {
                                 <div className="portfolio-card style2">
                                     <div className="portfolio-card-thumb">
                                         {/* Tüm görseller için sabit yükseklik vererek slider yüksekliğini eşitliyoruz */}
-                                        <img src={img.imgSrc} alt={`project-${index + 1}`} style={{ width: "100%", height: 480, objectFit: "cover", display: "block" }} />
+                                        <Image src={img.imgSrc} alt={`project-${index + 1}`} width={800} height={480} style={{ width: "100%", height: 480, objectFit: "cover", display: "block" }} />
                                         <span className="portfolio-card-number">{`0${index + 1}`}</span>
                                         <button className="icon-btn popup-image" onClick={() => openLightbox(index)}>
                                             <i className="ri-eye-line"></i>

@@ -93,7 +93,7 @@ const HeaderFour = () => {
                             <div className="row align-items-center justify-content-between home-two-header-justify-content-extra">
                                 <div className="col-auto d-xxl-none d-block">
                                     <div className="header-logo">
-                                        <Link href="/"><img src="/main-assets/img/logo.svg" alt="logo" /></Link>
+                                        <Link href="/"><Image src="/main-assets/img/logo.svg" alt="logo" width={120} height={60} /> </Link>
                                     </div>
                                 </div>
                                 <div className="col-auto ms-xxl-0">

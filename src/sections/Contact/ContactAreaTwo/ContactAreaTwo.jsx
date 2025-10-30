@@ -1,4 +1,5 @@
 import ContactDropdown from "../../Common/ContactDropdown";
+import Image from "next/image";
 
 const ContactAreaTwo = () => {
   return (
@@ -13,7 +14,7 @@ const ContactAreaTwo = () => {
               <div className="contact-form-wrap">
                 <div className="title-area">
                   <span className="sub-title text-theme">
-                    <img src="/main-assets/img/icon/section-subtitle-icon.svg" alt="img" />
+                    <Image src="/main-assets/img/icon/section-subtitle-icon.svg" alt="img" width={24} height={24} />
                     Get Free Quote
                   </span>
                   <h2 className="sec-title">Have a project in mind?</h2>

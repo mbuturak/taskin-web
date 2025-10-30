@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const ContactArea = () => {
   return (
@@ -32,7 +33,7 @@ const ContactArea = () => {
                 </div>
               </div>
               <div className="contact-page-card-thumb">
-                <img src="/main-assets/img/normal/contact_page1-1.png" alt="img" />
+                <Image src="/main-assets/img/normal/contact_page1-1.png" alt="img" width={360} height={240} />
               </div>
             </div>
           </div>
@@ -64,7 +65,7 @@ const ContactArea = () => {
                 </div>
               </div>
               <div className="contact-page-card-thumb">
-                <img src="/main-assets/img/normal/contact_page1-2.png" alt="img" />
+                <Image src="/main-assets/img/normal/contact_page1-2.png" alt="img" width={360} height={240} />
               </div>
             </div>
           </div>
@@ -96,7 +97,7 @@ const ContactArea = () => {
                 </div>
               </div>
               <div className="contact-page-card-thumb">
-                <img src="/main-assets/img/normal/contact_page1-3.png" alt="img" />
+                <Image src="/main-assets/img/normal/contact_page1-3.png" alt="img" width={360} height={240} />
               </div>
             </div>
           </div>

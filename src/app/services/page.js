@@ -18,6 +18,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import Link from "next/link";
+import Image from "next/image";
 
 export default function ServicesPage() {
     const services = [
@@ -126,9 +127,12 @@ export default function ServicesPage() {
                             <div className="row align-items-center">
                                 {/* On even indexes (0-based), image left; on odd, image right */}
                                 <div className={`col-md-6 ${index % 2 === 1 ? 'order-md-2' : ''}`}>
-                                    <img
+                                    <Image
                                         src={item.img}
                                         alt={item.alt}
+                                        width={1200}
+                                        height={360}
+                                        unoptimized={item.img.startsWith('http')}
                                         style={{ width: '100%', height: '360px', objectFit: 'cover', borderRadius: '8px', display: 'block', ...item.style }}
                                     />
                                 </div>

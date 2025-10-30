@@ -1,4 +1,3 @@
-import AboutThree from "~/sections/About/AboutThree";
 import Breadcumb from "~/sections/About/Breadcumb";
 import HeaderFour from "~/sections/Common/Header/HeaderFour";
 import FooterThree from "~/sections/Common/Footer/FooterThree";
@@ -17,6 +16,8 @@ import "~/public/main-assets/css/slick.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import Image from "next/image";
+
 export default function AboutPage() {
     return (
         <div style={{ overflow: 'hidden' }}>
@@ -28,7 +29,8 @@ export default function AboutPage() {
                         <div className="col-xl-6">
                             <div className="about-thumb2 mb-60 mb-xl-0">
                                 <div className="about-img-1">
-                                    <img src="/main-assets/image/About-us.jpeg" alt="img" />
+                                    {/* Next.js Image for optimization */}
+                                    <Image src="/main-assets/image/About-us.jpeg" alt="About us" width={1200} height={800} priority />
                                 </div>
 
                             </div>

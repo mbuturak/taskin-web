@@ -1,4 +1,5 @@
 import { CookieDeclaration } from '~/components';
+import Image from 'next/image';
 
 const FooterThree = () => {
     return (
@@ -9,7 +10,7 @@ const FooterThree = () => {
                         <div className="col-md-6 col-xl-4">
                             <div className="widget widget-about footer-widget">
                                 <div className="footer-logo">
-                                    <a href="/"><img src="/main-assets/img/logo-white.svg" alt="Construz" /></a>
+                                    <a href="/"><Image src="/main-assets/img/logo-white.svg" alt="Construz" width={160} height={40} /></a>
                                 </div>
                             </div>
                         </div>

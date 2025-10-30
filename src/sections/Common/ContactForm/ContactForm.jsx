@@ -262,7 +262,7 @@ const ContactForm = ({theme = 'light'}) => {
             marginBottom: '20px',
             fontSize: '14px'
           }}>
-            Thank you! Your message has been sent successfully. We'll get back to you soon.
+            Thank you! Your message has been sent successfully. We&apos;ll get back to you soon.
           </div>
         )}
 

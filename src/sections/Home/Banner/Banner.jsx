@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const Banner = () => {
     return (
@@ -26,12 +27,12 @@ const Banner = () => {
             </div>
             <div className="container-fluid">
                 <div className="hero-thumb-wrap">
-                    <div className="hero-thumb1"><img src="/landing-assets/img/01.png" alt="img" /></div>
-                    <div className="hero-thumb2 jump"><img src="/landing-assets/img/06.png" alt="img" /></div>
-                    <div className="hero-thumb3 jump"><img src="/landing-assets/img/03.png" alt="img" /></div>
-                    <div className="hero-thumb4 jump-reverse"><img src="/landing-assets/img/04.png" alt="img" /></div>
-                    <div className="hero-thumb5 jump-reverse"><img src="/landing-assets/img/05.png" alt="img" /></div>
-                    <div className="hero-thumb6 jump-reverse"><img src="/landing-assets/img/02.png" alt="img" /></div>
+                    <div className="hero-thumb1"><Image src="/landing-assets/img/01.png" alt="img" width={400} height={300} /></div>
+                    <div className="hero-thumb2 jump"><Image src="/landing-assets/img/06.png" alt="img" width={400} height={300} /></div>
+                    <div className="hero-thumb3 jump"><Image src="/landing-assets/img/03.png" alt="img" width={400} height={300} /></div>
+                    <div className="hero-thumb4 jump-reverse"><Image src="/landing-assets/img/04.png" alt="img" width={400} height={300} /></div>
+                    <div className="hero-thumb5 jump-reverse"><Image src="/landing-assets/img/05.png" alt="img" width={400} height={300} /></div>
+                    <div className="hero-thumb6 jump-reverse"><Image src="/landing-assets/img/02.png" alt="img" width={400} height={300} /></div>
                 </div>
             </div>
         </section>
