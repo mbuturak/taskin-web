@@ -47,10 +47,10 @@ const HeaderFour = () => {
         if (viewportWidth < 992) return 320;
         return 385;
     };
+    
     const sloganWidth = computeSloganWidth();
     const sloganHeight = Math.round(sloganWidth * 50 / 385);
-    // On narrow viewports, increase right offset to nudge slogan leftwards
-    const sloganRight = viewportWidth < 576 ? 65 : 20;
+    const sloganRight = viewportWidth < 576 ? 0 : 20;
 
 
     const handleMobileMenuOpen = () => {
@@ -80,18 +80,19 @@ const HeaderFour = () => {
                     {/* Main Menu Area */}
                     <div className="menu-area" style={{ position: 'relative', padding: '15px 0' }}>
                         {/* Keep logo centered vertically in sticky state */}
-                        <div className="header-navbar-logo" style={headerLogoStyle}>
+                        <div className="header-navbar-logo d-none d-lg-block" style={headerLogoStyle}>
                             <Link href="/"> <Image src="/main-assets/image/logo.svg" alt="logo" width={155} height={100} /></Link>
                         </div>
                         {/* Slogan positioned in top-right corner; right offset adapts on mobile */}
-                        <div style={{ position: 'absolute', top: '25px', right: sloganRight, zIndex: 1000 }}>
+                        <div className="header-slogan" style={{ position: 'absolute', top: '25px', right: sloganRight, zIndex: 1000 }}>
                             {/* Slogan uses responsive width and proportional height */}
                             <Image src="/main-assets/image/slogan.png" alt="slogan" width={sloganWidth} height={sloganHeight} />
                         </div>
                         <div className="logo-bg"></div>
                         <div className="container">
                             <div className="row align-items-center justify-content-between home-two-header-justify-content-extra">
-                                <div className="col-auto d-xxl-none d-block">
+                                {/* Hide mobile logo entirely; desktop logo above remains visible */}
+                                <div className="col-auto d-none">
                                     <div className="header-logo">
                                         <Link href="/"><Image src="/main-assets/img/logo.svg" alt="logo" width={120} height={60} /> </Link>
                                     </div>

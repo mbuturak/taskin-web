@@ -1211,7 +1211,8 @@ textarea.is-invalid {
   text-align: center;
   background-color: var(--smoke-color2);
 }
-.mobile-menu-wrapper .mobile-logo svg {
+.mobile-menu-wrapper .mobile-logo svg,
+.mobile-menu-wrapper .mobile-logo img {
   max-width: 185px;
 }
 .mobile-menu-wrapper .menu-toggle {

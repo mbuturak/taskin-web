@@ -2189,7 +2189,8 @@ textarea.is-invalid {
   border-bottom: 1px solid var(--theme-color);
 }
 
-.mobile-menu-wrapper .mobile-logo svg {
+.mobile-menu-wrapper .mobile-logo svg,
+.mobile-menu-wrapper .mobile-logo img {
   max-width: 185px;
 }
 
@@ -6786,6 +6787,12 @@ ul.wp-block-latest-posts li:last-child {
   background: var(--white-color);
   border-radius: 0;
   border-right: 1px solid var(--border-color);
+}
+
+@media (max-width: 991px) {
+  .header-layout2 .menu-area .logo-bg {
+    display: none;
+  }
 }
 
 .header-layout2 .navbar-right-desc {
