@@ -1,0 +1,1 @@
+export { default as CookieDeclaration } from './CookieDeclaration';
