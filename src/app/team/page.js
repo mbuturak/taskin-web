@@ -56,7 +56,7 @@ export default function TeamPage() {
                 backgroundColor: '#f8f9fa',
                 padding: '0',
                 borderRadius: '8px',
-                objectPosition: 'center 40%',
+                objectPosition: 'center 58%',
             },
         },
         {

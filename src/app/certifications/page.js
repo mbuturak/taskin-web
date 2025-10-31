@@ -99,6 +99,7 @@ export default function AboutPage() {
         },
 
     ]
+    
     return (
         <div style={{ overflow: 'hidden' }}>
             <HeaderFour />

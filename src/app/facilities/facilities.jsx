@@ -20,6 +20,15 @@ const Facilities = () => {
         { imgSrc: "/main-assets/image/f8.jpg" }
     ];
 
+    const certifications = [
+        {
+            title: "Task-In - LR ISO23678 Certificate",
+            image: "/main-assets/image/lloyd.svg",
+            document: "/main-assets/docs/Task-In - LR ISO23678 Certificate.pdf"
+        }
+
+    ]
+
     const openLightbox = (index) => {
         setLightboxIndex(index);
         setLightboxOpen(true);
@@ -131,6 +140,27 @@ const Facilities = () => {
                         <div className="title-area portfolio-area-content-text-extra-style text-center">
                             <p className="sec-text">Task-in Services has own training center with Loyd Register certificate as academy to train his own Service Engineers (Task-In - LR ISO23678 Certificate). This provides ship management with full confidence that a single company supports all makers and covers all types of their equipment.</p>
                         </div>
+                        <section className="blog-area space-extra-bottom">
+                            <div className="container">
+                                <div className="row gy-4 justify-content-center">
+                                    {certifications.map((certification, index) => (
+                                        <div className="col-md-6 col-lg-4" key={index}>
+                                            <div className="blog-card" style={{ cursor: "pointer" }} onClick={() => window.open(certification.document, '_blank')}>
+                                                <div style={{ textAlign: "center", marginBottom: "8px", height: "90px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                                                    <Image src={certification.image || "/main-assets/image/logo.svg"} alt="certification image" width={250} height={90} style={{ maxWidth: "250px", maxHeight: "90px", width: "auto", height: "auto", display: "inline-block", objectFit: "contain" }} />
+                                                </div>
+                                                <div className="blog-content" style={{ textAlign: "center", padding: "0 5px" }}>
+                                                    <h3 className="blog-title" style={{ fontSize: "16px", marginTop: "0", marginBottom: "0" }}>
+                                                        {certification.title}
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
+
+                                </div>
+                            </div>
+                        </section>
                     </div>
                 </div>
                 <div className="portfolio-slider2 overflow-hidden" style={{ position: "relative" }}>
