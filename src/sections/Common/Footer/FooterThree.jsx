@@ -10,7 +10,7 @@ const FooterThree = () => {
                         <div className="col-md-6 col-xl-4">
                             <div className="widget widget-about footer-widget">
                                 <div className="footer-logo">
-                                    <a href="/"><Image src="/main-assets/img/logo-white.svg" alt="Construz" width={160} height={40} /></a>
+                                    <a href="/"><Image src="/main-assets/img/logo-white.svg" alt="Construz" width={400} height={40} style={{marginTop: '12px'}} /></a>
                                 </div>
                             </div>
                         </div>

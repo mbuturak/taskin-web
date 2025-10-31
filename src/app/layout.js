@@ -28,8 +28,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <title>Taskin Services</title>
-        <meta name="description" content="Taskin Services" />
+        <title>Task-in Services</title>
+        <meta name="description" content="Task-in Services" />
         <link rel="icon" type="image/png" sizes="32x32" href="/main-assets/image/favicon.svg" />
         <link rel="apple-touch-icon" sizes="180x180" href="/main-assets/image/favicon.svg" />
         <link rel="shortcut icon" href="/main-assets/image/favicon.svg" />

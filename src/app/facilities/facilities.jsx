@@ -30,8 +30,8 @@ const Facilities = () => {
         slidesToShow: 3,
         slidesToScroll: 2,
         autoplay: true,
-        speed: 1500,
-        autoplaySpeed: 1000,
+        speed: 2000,
+        autoplaySpeed: 1500,
         dots: true,
         arrows: true,
         nextArrow: <SampleNextArrow />,
@@ -78,8 +78,8 @@ const Facilities = () => {
                     background: "rgba(0,0,0,0.7)",
                     color: "#fff",
                     position: "absolute",
-                    right: 12,
-                    top: "50%",
+                    right: 20,
+                    top: "45%",
                     transform: "translateY(-50%)",
                     boxShadow: "0 6px 16px rgba(0,0,0,0.35)",
                     zIndex: 5,
@@ -96,7 +96,7 @@ const Facilities = () => {
         const { className, style, onClick } = props;
         return (
             <div
-                className={className}
+                className={`${className} custom-prev-arrow`}
                 /* Daha görünür bir ok için boyut, kontrast, gölge ve katman iyileştirmeleri */
                 style={{
                     ...style,
@@ -109,13 +109,13 @@ const Facilities = () => {
                     background: "rgba(0,0,0,0.7)",
                     color: "#fff",
                     position: "absolute",
-                    left: 12,
-                    top: "50%",
+                    left: 20,
+                    top: "58%",
                     transform: "translateY(-50%)",
                     boxShadow: "0 6px 16px rgba(0,0,0,0.35)",
                     zIndex: 5,
                     border: "1px solid rgba(255,255,255,0.25)",
-                    cursor: "pointer"
+                    cursor: "pointer",
                 }}
                 onClick={onClick}
             >
@@ -150,6 +150,10 @@ const Facilities = () => {
                             </div>
                         ))}
                     </Slider>
+                    <style jsx global>{`
+                        /* Prev arrow konumunu zorla (slider CSS'sini bastır) */
+                        .portfolio-slider2 .custom-prev-arrow { left: 24px !important; }
+                    `}</style>
                 </div>
             </div>
             <div className="extra-style">

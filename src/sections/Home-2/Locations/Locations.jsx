@@ -1,11 +1,13 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
 
+import { usePathname } from 'next/navigation'
+
 // Task-In Services office locations
 const officeLocations = [
   {
     id: 1,
-    name: "Task-In Services (Headquarters)",
+    name: "Task-In Services B.V. (Headquarters)",
     address: "Koolhovenstraat 1",
     city: "3125 BT Schiedam",
     country: "Netherlands",
@@ -13,6 +15,7 @@ const officeLocations = [
     email: "info@taskinservices.com",
     contact: "Kemal Taskin – Managing Director",
     coordinates: { lat: 51.93385881017964, lng: 4.400146358946731 },
+    flag: "/main-assets/image/flag/netherland.jpg",
     //services: ["Marine Services", "Port Operations", "Logistics", "Management"]
   },
   {
@@ -25,11 +28,12 @@ const officeLocations = [
     email: "baltic@taskinservices.com",
     contact: "Capt. Egemen Bal – Branch Manager",
     coordinates: { lat: 61.00221998376059, lng: 25.539972131084586 },
+    flag: "/main-assets/image/flag/finland.jpg",
     //services: ["Baltic Operations", "Marine Services", "Port Management"]
   },
   {
     id: 3,
-    name: "Task-In Germany",
+    name: "Task-In Services GmbH",
     address: "Theodor-Storm-Straße 1",
     city: "21218 Seevetal",
     country: "Germany",
@@ -37,11 +41,12 @@ const officeLocations = [
     email: "germany@taskinservices.com",
     contact: "Alper Kabaca – Branch Manager",
     coordinates: { lat: 53.383758289802365, lng: 9.988224654570441 },
+    flag: "/main-assets/image/flag/germany.jpg",
     //services: ["European Operations", "Marine Services", "Logistics"]
   },
   {
     id: 4,
-    name: "Task-In USA",
+    name: "Task-In Services USA",
     address: "108 Alliant Dr Suite B",
     city: "Houston, TX 77032",
     country: "United States",
@@ -50,6 +55,7 @@ const officeLocations = [
     email: "ops@taskinusa.com",
     contact: "Cem Kara – Branch Manager",
     coordinates: { lat: 29.931808702304476, lng: -95.31948843727211 },
+    flag: "/main-assets/image/flag/usa.jpg",
     //services: ["US Operations", "Marine Services", "Port Services", "Logistics"]
   }
 ];
@@ -59,10 +65,12 @@ const Locations = () => {
   const [map, setMap] = useState(null);
   const [markers, setMarkers] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [InfoWindowClass, setInfoWindowClass] = useState(null);
   const [error, setError] = useState(null);
   const mapRef = useRef(null);
   const infoWindowRef = useRef(null);
+  
+  const params = usePathname();
+
 
   // Google Maps yükleme
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -133,7 +141,6 @@ const Locations = () => {
             });
             
             setMap(googleMap);
-            setInfoWindowClass(() => InfoWindow);
             createMarkers(googleMap, Marker, InfoWindow, Size);
             
             // Haritayı resize et
@@ -198,34 +205,35 @@ const Locations = () => {
 
   // Bilgi penceresi göster
   const showInfoWindow = (googleMap, marker, location) => {
-    if (!InfoWindowClass) return;
-    
-    // Önceki açık infoWindow'u kapat
-    if (infoWindowRef.current) {
-      infoWindowRef.current.close();
+    if (!window.google || !window.google.maps) return;
+
+    // Tek bir InfoWindow örneğini yeniden kullan
+    if (!infoWindowRef.current) {
+      infoWindowRef.current = new window.google.maps.InfoWindow();
     }
 
-    const infoWindowInstance = new InfoWindowClass({
-      content: `
-        <div style="padding: 20px; max-width: 350px; font-family: Arial, sans-serif; border-radius: 8px;">
-          <h3 style="margin: 0 0 15px 0; color: #1f2937; font-size: 20px; font-weight: bold; line-height: 1.2;">${location.name}</h3>
-          <div style="margin-bottom: 12px; font-size: 14px; color: #4b5563; line-height: 1.4;">
-            <div style="margin-bottom: 4px;"><strong>Address:</strong> ${location.address}</div>
-            <div style="margin-bottom: 4px;"><strong>City:</strong> ${location.city}</div>
-            <div><strong>Country:</strong> ${location.country}</div>
-          </div>
-          <div style="margin-bottom: 12px; font-size: 14px; color: #4b5563; line-height: 1.4;">
-            <div style="margin-bottom: 4px;"><strong>Contact:</strong> ${location.contact}</div>
-            <div style="margin-bottom: 4px;"><strong>Phone:</strong> <a href="tel:${location.phone}" style="color: #3B82F6; text-decoration: none;">${location.phone}</a></div>
-            ${location.mobile ? `<div style="margin-bottom: 4px;"><strong>Mobile:</strong> <a href="tel:${location.mobile}" style="color: #3B82F6; text-decoration: none;">${location.mobile}</a></div>` : ''}
-            <div><strong>Email:</strong> <a href="mailto:${location.email}" style="color: #3B82F6; text-decoration: none;">${location.email}</a></div>
-          </div>
+    const contentHtml = `
+      <div style="padding: 20px; max-width: 350px; font-family: Arial, sans-serif; border-radius: 8px;">
+        <div style="text-align: center;">
+          <img src="${location.flag}" alt="${location.country}" style="display: inline-block; width: 60%; height: auto; object-fit: cover;" />
         </div>
-      `
-    });
+        <h3 style="margin: 0 0 15px 0; color: #1f2937; font-size: 20px; font-weight: bold; line-height: 1.2;">${location.name}</h3>
+        <div style="margin-bottom: 12px; font-size: 14px; color: #4b5563; line-height: 1.4;">
+          <div style="margin-bottom: 4px;"><strong>Address:</strong> ${location.address}</div>
+          <div style="margin-bottom: 4px;"><strong>City:</strong> ${location.city}</div>
+          <div><strong>Country:</strong> ${location.country}</div>
+        </div>
+        <div style="margin-bottom: 12px; font-size: 14px; color: #4b5563; line-height: 1.4;">
+          <div style="margin-bottom: 4px;"><strong>Contact:</strong> ${location.contact}</div>
+          <div style="margin-bottom: 4px;"><strong>Phone:</strong> <a href="tel:${location.phone}" style="color: #3B82F6; text-decoration: none;">${location.phone}</a></div>
+          ${location.mobile ? `<div style=\"margin-bottom: 4px;\"><strong>Mobile:</strong> <a href=\"tel:${location.mobile}\" style=\"color: #3B82F6; text-decoration: none;\">${location.mobile}</a></div>` : ''}
+          <div><strong>Email:</strong> <a href="mailto:${location.email}" style="color: #3B82F6; text-decoration: none;">${location.email}</a></div>
+        </div>
+      </div>
+    `;
 
-    infoWindowInstance.open(googleMap, marker);
-    infoWindowRef.current = infoWindowInstance;
+    infoWindowRef.current.setContent(contentHtml);
+    infoWindowRef.current.open(googleMap, marker);
   };
 
   // Adres tıklama fonksiyonu
@@ -260,7 +268,14 @@ const Locations = () => {
         <div className="row justify-content-center">
           <div className="col-12">
             <div className="title-area mb-60 text-center">
-              <h2 className="sec-title">OUR LOCATIONS</h2>
+              {
+                params != '/locations' && !isLoading && !error && (
+                  <>
+                  <h2 className="sec-title">OUR LOCATIONS</h2>
+                  </>
+
+                )
+              }              
               <p className="sec-text" style={{ lineHeight: '1.5', textAlign: 'center' }}>
               Task-in Services is a globally operating marine safety service provider headquartered in the Netherlands, with three 
               strategically located branches. We extend our services across 60 ports in ARA, Europe, Scandinavia and the Baltics, and USA, providing fast, regulation-compliant support wherever needed.

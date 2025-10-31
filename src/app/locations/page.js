@@ -23,7 +23,7 @@ export default function LocationsPage() {
     return (
         <div style={{ overflow: 'hidden' }}>
             <HeaderFour />
-            <Breadcumb title="Locations" bgImage="/main-assets/image/locations-bg.jpg" bgPosition="center 22%" />
+            <Breadcumb title="LOCATIONS" bgImage="/main-assets/image/locations-bg.jpg" bgPosition="center 22%" />
             <Locations />
             <Client />
             <Contact />

@@ -72,7 +72,6 @@ const Client = () => {
         { src: "/main-assets/image/rina.svg", alt: "RINA", width: 160, height: 100, href: "https://www.rina.org/en" },
         { src: "/main-assets/image/classnk.jpeg", alt: "ClassNK", width: 175, height: 100, href: "https://www.classnk.or.jp/hp/en/index.html" },
         { src: "/main-assets/image/kr.png", alt: "Korean Register", width: 175, height: 100, href: "https://www.krs.co.kr/eng/"  },
-        { src: "/main-assets/image/rms.png", alt: "RMS", width: 135, height: 100, href: "https://rs-class.org/en/" },
         { src: "/main-assets/image/drager.svg", alt: "Drager", width: 135, height: 100, href: "https://www.draeger.com/en_neeur/Home" },
         { src: "/main-assets/image/3mscot.svg", alt: "3MScot", width: 200, height: 150, href: "https://www.3m.com/" },
         { src: "/main-assets/image/mobiak.jpg", alt: "MobiAk", width: 200, height: 150, href: "https://www.mobiakfire.com/" },
@@ -80,6 +79,9 @@ const Client = () => {
         { src: "/main-assets/image/shf.webp", alt: "SHF", width: 200, height: 150, href: "https://shfangzhan.com/" },
         { src: "/main-assets/image/shipserv.jpeg", alt: "Shipserv", width: 200, height: 150, href: "https://www.shipserv.com/" },
         { src: "/main-assets/image/msa.jpg", alt: "MSA", width: 200, height: 150, href: "https://www.msasafety.com/global" },
+        { src: "/main-assets/image/gastec.png", alt: "Gastec", width: 135, height: 100, href: "https://www.gastec.co.jp/" },
+        { src: "/main-assets/image/interspiro.png", alt: "Interspiro", width: 135, height: 100, href: "https://interspiro.com/" },
+        { src: "/main-assets/image/lalizas.png", alt: "Lalizas", width: 135, height: 100, href: "https://lalizas.com/" },
     ];
 
     return (

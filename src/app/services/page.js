@@ -27,7 +27,7 @@ export default function ServicesPage() {
             href: "/",
             img: "/main-assets/image/ffe2.jpg",
             alt: "FFE Services",
-            desc: "Complete marine firefighting packages, service of HP & LP Co2 systems, foam systems and foam concentrates analysis and supplies, portable foam applicators, alternative gas systems as Novec, FM200, Ansul servicing and inspection, portable and stationery fire extinguishers, dry powder systems, humidity analysis, galley Co2 and deep fat fryer systems, smoke detection systems, fire alarm systems, gaseous fire suppression systems, fire detection systems, smoke and heat detection systems, accommodation and engine water mist systems, hydrostatic pressure testing and refilling of cylinders, 5-yearly, 10-yearly and 20-yearly inspections and repairs, internal valve inspections",
+            desc: "Complete marine firefighting packages, inspection of HP & LP Co2 systems, foam systems and foam concentrates analysis and supplies, portable foam applicators, alternative gas systems as Novec, FM200, Ansul, portable and stationery fire extinguishers, dry powder systems, humidity analysis, galley Co2 and deep fat fryer systems, smoke detection systems, fire alarm systems, gaseous fire suppression systems, fire detection systems, smoke and heat detection systems, accommodation and engine water mist systems, hydrostatic pressure testing and refilling of cylinders, 5-yearly, 10-yearly and 20-yearly inspections and repairs, internal valve inspections",
             style: {
                 objectPosition: 'center 70%'
             },
@@ -38,7 +38,7 @@ export default function ServicesPage() {
             img: "/main-assets/image/lse.jpg",
             alt: "LSE Services",
             desc:
-                "Lifejackets inspections and services, spare parts supply, immersion suits inspections and repairs, breathing apparatus services and air analyses, air compressors inspections and services, Emergency Escape Breathing Apparatus (EEBD) inspections and services, hydrostatic testing of steel and composite cylinders, inspection and supply of fireman suits, inspection and service of gastight chemical suits, inspection and supply of full body harnesses",
+                "Inspection of lifejackets, spare parts supply, immersion suits, breathing apparatus and compressor air analyses, Emergency Escape Breathing Apparatus (EEBD), hydrostatic testing of steel and composite cylinders, fireman suits, gastight chemical suits, full body harnesses",
             style: {
                objectPosition: 'center 45%'
             },
@@ -49,7 +49,7 @@ export default function ServicesPage() {
             img: "/main-assets/image/lsa.jpeg",
             alt: "LSA Services",
             desc:
-                "Lifeboats, freefalls and rescue boats annual, 5-yearly inspections and services, release hook inspection and services, wire replacements with multi-brand OEM and service provider approvals",
+                "Inspection of lifeboats, freefalls and rescue boats annually and 5-yearly, release hook inspection and services, wire replacements with multi-brand OEM and service provider approvals",
             style: {
                 width: '100%',
                 height: '360px',
@@ -64,7 +64,7 @@ export default function ServicesPage() {
             img: "/main-assets/image/calibration.jpg",
             alt: "Calibration Services",
             desc:
-                "Portable and fixed gas detection system inspection, services and repairs, components renewal, sensors and parts supply, calibration gases, temperature gauges calibration, UTI calibration, ODME calibration, OWS (15 ppm) calibration, alcoholmeter calibration, analogue or digital pressure gauge calibrations, dynamometer calibrations, torque wrench calibrations, fire hoses, fire nozzles, ",
+                "Inspection of portable and fixed gas detection systems, services and repairs, components renewal, sensors and parts supply, calibration gases, temperature gauges calibration, UTI calibration, ODME calibration, OWS (15 ppm) calibration, alcoholmeter calibration, analogue or digital pressure gauge calibrations, dynamometer calibrations, torque wrench calibrations, fire hoses, fire nozzles",
             style: {
                 width: '100%',
                 height: '360px',
@@ -79,7 +79,7 @@ export default function ServicesPage() {
             img: "/main-assets/image/crane-load.jpeg",
             alt: "Cargo Crane and Load Test",
             desc:
-                "Dynamic load tests of cargo cranes, accommodation ladders, embarkation ladders, cargo hold hatches and other lifting appliances with fully IACS approved water bags/dynamometer and shackles. We maintain one of the largest stocks of water bags and dynamometers in Europe, with capacities up to 1,500 tons. Our load test team and equipment are considered a lifesaver by many heavy-lift crane operators. We can ship any load testing materials within 24 hours to the designated location. Leading companies such as SAL and the H&P Group rely on our services and have expressed high satisfaction with our performance.",
+                "Dynamic load tests of cargo cranes, accommodation ladders, embarkation ladders, cargo hold hatches and other lifting appliances up to 1200 tons with fully IACS approved water bags / dynamometer and shackles",
             style: {
                 width: '100%',
                 height: '360px',

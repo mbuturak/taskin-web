@@ -42,6 +42,40 @@ export default function TeamPage() {
                 borderRadius: '8px',
             },
         },
+        {
+            name: "Ceren,",
+            position: "Sales Executive",
+            image: "/main-assets/image/ceren.jpg",
+            description: `I joined Task-in Services in 2022. With a Master’s degree in International Relations from Portugal, I enjoy working in multicultural environments and finding flexible and practical solutions for our customers.
+                            At Task-in Services, I focus on clear and friendly communication to make sure every request runs smoothly from start to finish. Growing up in a family that values safety at sea gave me a strong understanding of how important our work is, not only for operations but also for protecting lives. I am proud to be part of a supportive team that values flexibility, teamwork, and doing things the right way.
+                            `,
+            style: {
+                width: '100%',
+                height: '600px',
+                objectFit: 'cover',
+                backgroundColor: '#f8f9fa',
+                padding: '0',
+                borderRadius: '8px',
+                objectPosition: 'center 40%',
+            },
+        },
+        {
+            name: "Turab,",
+            position: "Accounting",
+            image: "/main-assets/image/turab.jpg",
+            description: `I joined Task-in Services in 2023. With a background in System Engineering and Master’s degrees in Human Resources Management and Occupational Health and Safety, I focus on creating safe, efficient, and people-centered workplaces. My experience in both the military and private sectors has helped me develop a structured and solution-oriented mindset that fits well within our operations.
+
+At Task-in Services, I concentrate on maintaining clear communication, supporting our teams, and ensuring that every process meets the highest safety standards. I truly value the cooperative atmosphere we have and take pride in being part of a company that places people, quality, and safety at the core of everything we do.`,
+            style: {
+                width: '100%',
+                height: '600px',
+                objectFit: 'cover',
+                backgroundColor: '#f8f9fa',
+                padding: '0',
+                borderRadius: '8px',
+                objectPosition: 'center 40%',
+            },
+        },
     ];
 
 
