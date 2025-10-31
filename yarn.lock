@@ -1973,6 +1973,11 @@ lru-cache@^10.2.0:
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-10.4.3.tgz#410fc8a17b70e598013df257c2446b7f3383f119"
   integrity sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==
 
+lucide-react@^0.552.0:
+  version "0.552.0"
+  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.552.0.tgz#037767b51513fe6db71818f1198fcd7df4a08bde"
+  integrity sha512-g9WCjmfwqbexSnZE+2cl21PCfXOcqnGeWeMTNAOGEfpPbm/ZF4YIq77Z8qWrxbu660EKuLB4nSLggoKnCb+isw==
+
 magnific-popup@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/magnific-popup/-/magnific-popup-1.2.0.tgz#333fcb56c0cd2ab3935340acca4ac9d8c6412e0d"
@@ -2318,7 +2323,7 @@ rc-util@^5.36.0:
     "@babel/runtime" "^7.18.3"
     react-is "^18.2.0"
 
-react-bootstrap@^2.10.3:
+react-bootstrap@^2.10.10:
   version "2.10.10"
   resolved "https://registry.yarnpkg.com/react-bootstrap/-/react-bootstrap-2.10.10.tgz#be0b0d951a69987152d75c0e6986c80425efdf21"
   integrity sha512-gMckKUqn8aK/vCnfwoBpBVFUGT9SVQxwsYrp9yDHt0arXMamxALerliKBxr1TPbntirK/HGrUAHYbAeQTa9GHQ==

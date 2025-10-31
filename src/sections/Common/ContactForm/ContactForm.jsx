@@ -43,6 +43,7 @@ const ContactForm = ({theme = 'light'}) => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
+  const [showConsentError, setShowConsentError] = useState(false);
 
   // Theme-based styling
   const isDark = theme === 'dark';
@@ -81,8 +82,11 @@ const ContactForm = ({theme = 'light'}) => {
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: type === 'checkbox' ? checked : value
+      [name]: (type === 'checkbox' || type === 'radio') ? checked : value
     }));
+    if (name === 'consent') {
+      setShowConsentError(!checked);
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -362,18 +366,25 @@ const ContactForm = ({theme = 'light'}) => {
         {/* Consent checkbox (zorunlu) */}
         <div className="form-group" style={{ marginBottom: '15px', display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
           <input
-            type="checkbox"
+            type="radio"
             id="consent"
             name="consent"
             checked={formData.consent}
             onChange={handleInputChange}
             required
+            onBlur={(e) => { if (!e.target.checked) setShowConsentError(true); }}
             style={{ marginTop: 3 }}
           />
           <label htmlFor="consent" style={{ ...labelStyle, marginBottom: 0, fontWeight: 400 }}>
             I agree to be contacted regarding my request.
           </label>
         </div>
+
+        {showConsentError && !formData.consent && (
+          <p style={{ color: '#ef4444', fontSize: '12px', margin: '0 0 15px 0' }}>
+            Please confirm to continue.
+          </p>
+        )}
 
         {submitStatus === 'success' && (
           <div style={{
@@ -430,6 +441,7 @@ const ContactForm = ({theme = 'light'}) => {
               e.target.style.backgroundColor = '#3B82F6';
             }
           }}
+          onClick={() => { if (!formData.consent) setShowConsentError(true); }}
         >
           {isSubmitting ? 'Sending...' : 'SUBMIT'}
         </button>
