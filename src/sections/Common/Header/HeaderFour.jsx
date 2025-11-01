@@ -116,7 +116,9 @@ const HeaderFour = () => {
                                                 <ul className="sub-menu">
                                                     <li><Link href="/about">About Us</Link></li>
                                                     <li><Link href="/team">Our Team</Link></li>
-                                                    <li><Link href="/training-center">Our Facilities</Link></li>
+                                                    <li>
+                                                        <a href="/training-center" onClick={(e) => { e.preventDefault(); if (typeof window !== 'undefined') { window.location.href = '/training-center'; } }}>Our Facilities</a>
+                                                    </li>
                                                     <li><Link href="/certifications">Certifications</Link></li>
 
                                                 </ul>

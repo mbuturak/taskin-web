@@ -20,6 +20,14 @@ const MultiPageMobileMenu = ({ isMenuOpen, setIsMenuOpen }) => {
         setIsMenuOpen(false);
     }
 
+    // Hard redirect helper for stubborn cases (full reload)
+    const handleHardNavigate = (path) => {
+        if (typeof window !== 'undefined') {
+            window.location.href = path;
+        }
+        setIsMenuOpen(false);
+    }
+
     // Menu styles for company submenu
     const [companyMenuStyle, setCompanyMenuStyle] = useState({
         opacity: 0,
@@ -72,7 +80,9 @@ const MultiPageMobileMenu = ({ isMenuOpen, setIsMenuOpen }) => {
                             <ul className={`sub-menu submenu-class ${isCompanyMenuOpen ? 'menu-open' : ''}`} style={companyMenuStyle}>
                                 <li><Link href="/about" onClick={() => handleNavigate("/about")}>About Us</Link></li>
                                 <li><Link href="/team" onClick={() => handleNavigate("/team")}>Our Team</Link></li>
-                                <li><Link href="/training-center" onClick={() => handleNavigate("/training-center")}>Our Facilities</Link></li>
+                                <li>
+                                    <a href="/training-center" onClick={(e) => { e.preventDefault(); handleHardNavigate('/training-center'); }}>Our Facilities</a>
+                                </li>
                                 <li><Link href="/certifications" onClick={() => handleNavigate("/certifications")}>Certifications</Link></li>
                             </ul>
                         </li>

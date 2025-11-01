@@ -22,8 +22,12 @@ import "slick-carousel/slick/slick-theme.css";
 export default function FacilitiesPage() {
     return (
         <div style={{ overflow: 'hidden' }}>
-            {/* <Facilities /> */}
-            <h1>Training Center</h1>
+            <HeaderFour />
+            <Breadcumb title="TRAINING CENTER" bgImage="/main-assets/image/tc.jpg" bgPosition="center 71%"/>
+            <Facilities />
+            <Client />
+            <FooterThree />
+            <Scroll />
         </div>
     );
 }
