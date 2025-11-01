@@ -19,7 +19,7 @@ import "~/public/main-assets/css/slick.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export default function AboutPage() {
+export default function FacilitiesPage() {
     return (
         <div style={{ overflow: 'hidden' }}>
             <HeaderFour />
