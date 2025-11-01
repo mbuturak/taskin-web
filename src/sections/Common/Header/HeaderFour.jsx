@@ -116,7 +116,7 @@ const HeaderFour = () => {
                                                 <ul className="sub-menu">
                                                     <li><Link href="/about">About Us</Link></li>
                                                     <li><Link href="/team">Our Team</Link></li>
-                                                    <li><Link href="/facilities">Our Facilities</Link></li>
+                                                    <li><Link href="/training-center">Our Facilities</Link></li>
                                                     <li><Link href="/certifications">Certifications</Link></li>
 
                                                 </ul>

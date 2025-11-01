@@ -27,7 +27,7 @@ const FooterThree = () => {
                                         <li><a href="/certifications">CERTIFICATIONS</a></li>
                                     </ul>
                                     <ul className="menu">
-                                    <li><a href="/facilities">FACILITIES</a></li>
+                                    <li><a href="/training-center">FACILITIES</a></li>
                                         <li><a href="/locations">LOCATIONS</a></li>
                                         <li><a href="/contact">CONTACT</a></li>
                                     </ul>

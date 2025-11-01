@@ -25,7 +25,7 @@ const About = () => {
                                 </li>
                                 <li><img src="/main-assets/img/icon/about-checklsit-icon1-1.svg" alt="img" />Complete Fire Fighting Equipment Services(FFE)</li>
                                 <li><img src="/main-assets/img/icon/about-checklsit-icon1-1.svg" alt="img" />Long-term Collaboration with Fleet Management Services</li>
-                                <li><Link href="/facilities"><img src="/main-assets/img/icon/about-checklsit-icon1-1.svg" alt="img" />Training engineers in-house Training Facility (LR Approved)</Link></li>
+                                <li><Link href="/training-center"><img src="/main-assets/img/icon/about-checklsit-icon1-1.svg" alt="img" />Training engineers in-house Training Facility (LR Approved)</Link></li>
                                 <li><img src="/main-assets/img/icon/about-checklsit-icon1-1.svg" alt="img" />Safety equipment supplies and services</li>
                             </ul>
                         </div>

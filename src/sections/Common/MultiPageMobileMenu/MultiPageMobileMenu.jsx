@@ -64,7 +64,7 @@ const MultiPageMobileMenu = ({ isMenuOpen, setIsMenuOpen }) => {
                             <ul className={`sub-menu submenu-class ${isCompanyMenuOpen ? 'menu-open' : ''}`} style={companyMenuStyle}>
                                 <li><Link href="/about" onClick={handleMobileMenuClose}>About Us</Link></li>
                                 <li><Link href="/team" onClick={handleMobileMenuClose}>Our Team</Link></li>
-                                <li><Link href="/facilities" onClick={handleMobileMenuClose}>Our Facilities</Link></li>
+                                <li><Link href="/training-center" onClick={handleMobileMenuClose}>Our Facilities</Link></li>
                                 <li><Link href="/certifications" onClick={handleMobileMenuClose}>Certifications</Link></li>
                             </ul>
                         </li>
