@@ -136,7 +136,7 @@ export default function ServicesPage() {
         speed: 2000,
         autoplaySpeed: 1500,
         dots: true,
-        arrows: true,
+        arrows: false,
     };
 
     return (
