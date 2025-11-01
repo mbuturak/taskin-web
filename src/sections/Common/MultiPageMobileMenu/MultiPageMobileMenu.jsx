@@ -1,14 +1,22 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 const MultiPageMobileMenu = ({ isMenuOpen, setIsMenuOpen }) => {
     // Company dropdown menu state
     const [isCompanyMenuOpen, setIsCompanyMenuOpen] = useState(false);
+    const router = useRouter();
 
     // Close mobile menu
     const handleMobileMenuClose = () => {
+        setIsMenuOpen(false);
+    }
+
+    // Navigate reliably on mobile then close the menu
+    const handleNavigate = (path) => {
+        router.push(path);
         setIsMenuOpen(false);
     }
 
@@ -58,19 +66,19 @@ const MultiPageMobileMenu = ({ isMenuOpen, setIsMenuOpen }) => {
                 </div>
                 <div className="mobile-menu">
                     <ul>
-                        <li><Link href="/" onClick={handleMobileMenuClose}>HOME</Link></li>
+                        <li><Link href="/" onClick={() => handleNavigate("/")}>HOME</Link></li>
                         <li className={`menu-item-has-children submenu-item-has-children ${isCompanyMenuOpen ? 'active-class' : ''}`}>
                             <Link onClick={(e) => { e.preventDefault(); setIsCompanyMenuOpen(!isCompanyMenuOpen); }} href="#">COMPANY <span className="mean-expand-class"></span></Link>
                             <ul className={`sub-menu submenu-class ${isCompanyMenuOpen ? 'menu-open' : ''}`} style={companyMenuStyle}>
-                                <li><Link href="/about" onClick={handleMobileMenuClose}>About Us</Link></li>
-                                <li><Link href="/team" onClick={handleMobileMenuClose}>Our Team</Link></li>
-                                <li><Link href="/training-center" onClick={handleMobileMenuClose}>Our Facilities</Link></li>
-                                <li><Link href="/certifications" onClick={handleMobileMenuClose}>Certifications</Link></li>
+                                <li><Link href="/about" onClick={() => handleNavigate("/about")}>About Us</Link></li>
+                                <li><Link href="/team" onClick={() => handleNavigate("/team")}>Our Team</Link></li>
+                                <li><Link href="/training-center" onClick={() => handleNavigate("/training-center")}>Our Facilities</Link></li>
+                                <li><Link href="/certifications" onClick={() => handleNavigate("/certifications")}>Certifications</Link></li>
                             </ul>
                         </li>
-                        <li><Link href="/services" onClick={handleMobileMenuClose}>SERVICES</Link></li>
-                        <li><Link href="/locations" onClick={handleMobileMenuClose}>LOCATIONS</Link></li>
-                        <li><Link href="/contact" onClick={handleMobileMenuClose}>CONTACT</Link></li>
+                        <li><Link href="/services" onClick={() => handleNavigate("/services")}>SERVICES</Link></li>
+                        <li><Link href="/locations" onClick={() => handleNavigate("/locations")}>LOCATIONS</Link></li>
+                        <li><Link href="/contact" onClick={() => handleNavigate("/contact")}>CONTACT</Link></li>
                     </ul>
                 </div>
             </div>
