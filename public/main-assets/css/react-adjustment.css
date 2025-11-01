@@ -1728,6 +1728,17 @@ i.ri-star-fill {
   }
 }
 
+/* Ensure header submenus are always above decorative overlays (e.g., slogan) */
+@media (min-width: 992px) {
+  .main-menu ul.sub-menu {
+    z-index: 2000 !important;
+  }
+  /* Lower the slogan layer so it never blocks hovering into submenus */
+  .header-slogan {
+    z-index: 1 !important;
+  }
+}
+
 
 
 
