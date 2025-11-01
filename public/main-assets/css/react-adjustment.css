@@ -1739,16 +1739,6 @@ i.ri-star-fill {
   }
 }
 
-/* Speed up mobile menu open/close to improve perceived navigation latency */
-@media (max-width: 991px) {
-  .mobile-menu-wrapper {
-    transition: all ease 0.25s !important;
-  }
-  .mobile-menu-wrapper .mobile-menu-area {
-    transition: all ease 0.25s !important;
-  }
-}
-
 
 
 

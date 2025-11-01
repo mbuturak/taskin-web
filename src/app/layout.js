@@ -6,14 +6,6 @@ import { useEffect } from 'react';
 import Script from 'next/script';
 
 import "~/public/main-assets/css/fonts.css";
-import "~/public/landing-assets/css/animate.css";
-import "~/public/landing-assets/css/font-awesome.min.css";
-import "~/public/landing-assets/css/mfp.min.css";
-import "~/public/main-assets/css/bootstrap.min.css";
-import "~/public/main-assets/css/style.css";
-import "~/public/main-assets/css/react-adjustment.css";
-import "~/public/main-assets/css/remixicon.css";
-import "~/public/main-assets/css/slick.min.css";
 
 export default function RootLayout({ children }) {
   useEffect(() => {
