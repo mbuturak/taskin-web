@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import MultiPageMobileMenu from "../MultiPageMobileMenu/MultiPageMobileMenu";
 import Image from "next/image";
@@ -11,6 +12,7 @@ const HeaderFour = () => {
     const [isSideBarOpen, setIsSideBarOpen] = useState(false);
     const [viewportWidth, setViewportWidth] = useState(0); // Track viewport width for responsive slogan
     const sidebarRef = useRef(null);
+    const pathname = usePathname();
     
     // When header becomes sticky, center the logo vertically
     const headerLogoStyle = isSticky
@@ -71,6 +73,12 @@ const HeaderFour = () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, [sidebarRef]);
+
+    // Auto-close any open mobile panels when route changes
+    useEffect(() => {
+        setIsMenuOpen(false);
+        setIsSideBarOpen(false);
+    }, [pathname]);
 
     return (
         <div>

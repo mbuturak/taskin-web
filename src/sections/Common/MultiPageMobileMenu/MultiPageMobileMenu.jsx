@@ -58,19 +58,19 @@ const MultiPageMobileMenu = ({ isMenuOpen, setIsMenuOpen }) => {
                 </div>
                 <div className="mobile-menu">
                     <ul>
-                        <li><Link href="/">HOME</Link></li>
+                        <li><Link href="/" onClick={handleMobileMenuClose}>HOME</Link></li>
                         <li className={`menu-item-has-children submenu-item-has-children ${isCompanyMenuOpen ? 'active-class' : ''}`}>
-                            <Link onClick={() => setIsCompanyMenuOpen(!isCompanyMenuOpen)} href="#">COMPANY <span className="mean-expand-class"></span></Link>
+                            <Link onClick={(e) => { e.preventDefault(); setIsCompanyMenuOpen(!isCompanyMenuOpen); }} href="#">COMPANY <span className="mean-expand-class"></span></Link>
                             <ul className={`sub-menu submenu-class ${isCompanyMenuOpen ? 'menu-open' : ''}`} style={companyMenuStyle}>
-                                <li><Link href="/about">About Us</Link></li>
-                                <li><Link href="/team">Our Team</Link></li>
-                                <li><Link href="/facilities">Our Facilities</Link></li>
-                                <li><Link href="/certifications">Certifications</Link></li>
+                                <li><Link href="/about" onClick={handleMobileMenuClose}>About Us</Link></li>
+                                <li><Link href="/team" onClick={handleMobileMenuClose}>Our Team</Link></li>
+                                <li><Link href="/facilities" onClick={handleMobileMenuClose}>Our Facilities</Link></li>
+                                <li><Link href="/certifications" onClick={handleMobileMenuClose}>Certifications</Link></li>
                             </ul>
                         </li>
-                        <li><Link href="/services">SERVICES</Link></li>
-                        <li><Link href="/locations">LOCATIONS</Link></li>
-                        <li><Link href="/contact">CONTACT</Link></li>
+                        <li><Link href="/services" onClick={handleMobileMenuClose}>SERVICES</Link></li>
+                        <li><Link href="/locations" onClick={handleMobileMenuClose}>LOCATIONS</Link></li>
+                        <li><Link href="/contact" onClick={handleMobileMenuClose}>CONTACT</Link></li>
                     </ul>
                 </div>
             </div>
