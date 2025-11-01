@@ -6,18 +6,7 @@ import Facilities from "../facilities";
 import Client from "~/sections/Home-5-op/Client/Client";
 
 
-import "~/public/landing-assets/css/animate.css";
-import "~/public/landing-assets/css/font-awesome.min.css";
-import "~/public/landing-assets/css/mfp.min.css";
-import "~/public/main-assets/css/bootstrap.min.css";
-import "~/public/main-assets/css/style.css";
-import "~/public/main-assets/css/react-adjustment.css";
-import "~/public/main-assets/css/remixicon.css";
-import "~/public/main-assets/css/slick.min.css";
-
-// Slick carousel CSS (ServiceTwo için gerekli)
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// Global CSS moved to app/layout.js for faster route transitions
 
 export default function TrainingCenterPage() {
     return (
