@@ -12,6 +12,7 @@
     "@googlemaps/js-api-loader": "^2.0.2",
     "@sekmet/react-magnific-popup": "^1.0.2",
     "@types/google.maps": "^3.58.1",
+    "@vercel/speed-insights": "^1.2.0",
     "bootstrap": "^5.3.3",
     "imagesloaded": "^5.0.0",
     "isotope-layout": "^3.0.6",

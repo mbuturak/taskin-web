@@ -7,6 +7,7 @@ import Scroll from "~/sections/Common/Scroll";
 import HeaderFour from "~/sections/Common/Header/HeaderFour";
 import Locations from "~/sections/Home-2/Locations";
 import Client from "~/sections/Home-5-op/Client/Client";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
 import "~/public/landing-assets/css/animate.css";
@@ -34,6 +35,7 @@ export default function HomePage() {
       <Contact />
       <FooterThree />
       <Scroll />
+      <SpeedInsights />
     </div>
   );
 }
