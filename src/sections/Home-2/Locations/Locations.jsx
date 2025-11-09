@@ -1,64 +1,10 @@
 'use client';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 
-import { usePathname } from 'next/navigation'
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
-// Task-In Services office locations
-const officeLocations = [
-  {
-    id: 1,
-    name: "Task-In Services B.V. (Headquarters)",
-    address: "Koolhovenstraat 1",
-    city: "3125 BT Schiedam",
-    country: "Netherlands",
-    phone: "+31 6 22 81 23 33",
-    email: "info@taskinservices.com",
-    contact: "Kemal Taskin – Managing Director",
-    coordinates: { lat: 51.93385881017964, lng: 4.400146358946731 },
-    flag: "/main-assets/image/flag/netherland.jpg",
-    //services: ["Marine Services", "Port Operations", "Logistics", "Management"]
-  },
-  {
-    id: 2,
-    name: "Task-In Baltic Services Oy",
-    address: "Tiiriskankaantie 8",
-    city: "15860 Hollola",
-    country: "Finland",
-    phone: "+358 44 902 38 53",
-    email: "baltic@taskinservices.com",
-    contact: "Capt. Egemen Bal – Branch Manager",
-    coordinates: { lat: 61.00221998376059, lng: 25.539972131084586 },
-    flag: "/main-assets/image/flag/finland.jpg",
-    //services: ["Baltic Operations", "Marine Services", "Port Management"]
-  },
-  {
-    id: 3,
-    name: "Task-In Services GmbH",
-    address: "Theodor-Storm-Straße 1",
-    city: "21218 Seevetal",
-    country: "Germany",
-    phone: "+49 15 25 68 59 134",
-    email: "germany@taskinservices.com",
-    contact: "Alper Kabaca – Branch Manager",
-    coordinates: { lat: 53.383758289802365, lng: 9.988224654570441 },
-    flag: "/main-assets/image/flag/germany.jpg",
-    //services: ["European Operations", "Marine Services", "Logistics"]
-  },
-  {
-    id: 4,
-    name: "Task-In Services USA",
-    address: "108 Alliant Dr Suite B",
-    city: "Houston, TX 77032",
-    country: "United States",
-    phone: "+1 713 682 9324",
-    mobile: "+1 281 348 6929",
-    email: "ops@taskinusa.com",
-    contact: "Cem Kara – Branch Manager",
-    coordinates: { lat: 29.931808702304476, lng: -95.31948843727211 },
-    flag: "/main-assets/image/flag/usa.jpg",
-    //services: ["US Operations", "Marine Services", "Port Services", "Logistics"]
-  }
-];
+import { locations as locationData } from '~/data/locations';
 
 const Locations = () => {
   const [selectedLocation, setSelectedLocation] = useState(null);
@@ -70,6 +16,36 @@ const Locations = () => {
   const infoWindowRef = useRef(null);
   
   const params = usePathname();
+
+  const officeLocations = useMemo(
+    () =>
+      locationData.map((location, index) => ({
+        id: index + 1,
+        slug: location.slug,
+        primaryKeyword: location.primaryKeyword,
+        name: location.office.name,
+        address: location.office.addressLine1,
+        city: location.office.city,
+        region: location.office.region,
+        postalCode: location.office.postalCode,
+        country: location.office.country,
+        phone: location.office.phone,
+        mobile: location.office.mobile,
+        email: location.office.email,
+        contact: location.office.contact,
+        flag: location.office.flag,
+        coordinates: location.geo,
+        canonical: location.seo.canonical,
+        path: `/locations/${location.slug}`,
+      })),
+    []
+  );
+
+  useEffect(() => {
+    if (!selectedLocation && officeLocations.length > 0) {
+      setSelectedLocation(officeLocations[0]);
+    }
+  }, [officeLocations, selectedLocation]);
 
 
   // Google Maps yükleme
@@ -212,6 +188,11 @@ const Locations = () => {
       infoWindowRef.current = new window.google.maps.InfoWindow();
     }
 
+    const regionLine =
+      location.region && location.postalCode
+        ? `${location.region}, ${location.postalCode}`
+        : location.region || location.postalCode || '';
+
     const contentHtml = `
       <div style="padding: 20px; max-width: 350px; font-family: Arial, sans-serif; border-radius: 8px;">
         <div style="text-align: center;">
@@ -221,6 +202,7 @@ const Locations = () => {
         <div style="margin-bottom: 12px; font-size: 14px; color: #4b5563; line-height: 1.4;">
           <div style="margin-bottom: 4px;"><strong>Address:</strong> ${location.address}</div>
           <div style="margin-bottom: 4px;"><strong>City:</strong> ${location.city}</div>
+          ${regionLine ? `<div style="margin-bottom: 4px;"><strong>Region:</strong> ${regionLine}</div>` : ''}
           <div><strong>Country:</strong> ${location.country}</div>
         </div>
         <div style="margin-bottom: 12px; font-size: 14px; color: #4b5563; line-height: 1.4;">
@@ -228,6 +210,9 @@ const Locations = () => {
           <div style="margin-bottom: 4px;"><strong>Phone:</strong> <a href="tel:${location.phone}" style="color: #3B82F6; text-decoration: none;">${location.phone}</a></div>
           ${location.mobile ? `<div style=\"margin-bottom: 4px;\"><strong>Mobile:</strong> <a href=\"tel:${location.mobile}\" style=\"color: #3B82F6; text-decoration: none;\">${location.mobile}</a></div>` : ''}
           <div><strong>Email:</strong> <a href="mailto:${location.email}" style="color: #3B82F6; text-decoration: none;">${location.email}</a></div>
+        </div>
+        <div style="text-align: center; margin-top: 12px;">
+          <a href="${location.canonical}" style="display: inline-block; padding: 10px 16px; background-color: #2563eb; color: #ffffff; border-radius: 6px; text-decoration: none; font-weight: 600;">View ${location.primaryKeyword}</a>
         </div>
       </div>
     `;
@@ -384,6 +369,17 @@ const Locations = () => {
                     }}>
                       {location.city}
                     </p>
+                    {(location.region || location.postalCode) && (
+                      <p
+                        style={{
+                          margin: '0 0 4px 0',
+                          fontSize: '14px',
+                          color: '#6b7280',
+                        }}
+                      >
+                        {[location.region, location.postalCode].filter(Boolean).join(', ')}
+                      </p>
+                    )}
                     <p style={{ 
                       margin: '0', 
                       fontSize: '14px', 
@@ -391,6 +387,19 @@ const Locations = () => {
                     }}>
                       {location.country}
                     </p>
+                    <div style={{ marginTop: '12px' }}>
+                      <Link
+                        href={location.path}
+                        style={{
+                          fontSize: '13px',
+                          fontWeight: 600,
+                          color: '#1d4ed8',
+                          textDecoration: 'none',
+                        }}
+                      >
+                        Explore {location.primaryKeyword}
+                      </Link>
+                    </div>
                   </div>
                 ))}
               </div>

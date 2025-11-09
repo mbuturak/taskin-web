@@ -44,13 +44,7 @@ const FooterThree = () => {
                                 <div className="social-btn style3" style={{ marginTop: '15px' }}>
                                 <a href="https://www.linkedin.com/company/task-in-services/" target="_blank" rel="noopener noreferrer">
                                         <i className="ri-linkedin-fill"></i>
-                                    </a>
-                                    <a href="#" target="_blank" rel="noopener noreferrer">
-                                        <i className="ri-twitter-x-line"></i>
-                                    </a>
-                                    <a href="#" target="_blank" rel="noopener noreferrer">
-                                        <i className="ri-instagram-line"></i>
-                                    </a>                                    
+                                    </a>                                  
                                 </div>
                             </div>
                         </div>
