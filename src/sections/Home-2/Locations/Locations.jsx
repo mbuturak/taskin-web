@@ -385,6 +385,7 @@ const Locations = () => {
                       {location.country}
                     </p>
                     <div style={{ marginTop: '12px' }}>
+                      {/* Geçici olarak devre dışı bırakıldı
                       <Link
                         href={location.path}
                         style={{
@@ -396,6 +397,7 @@ const Locations = () => {
                       >
                         Explore {location.primaryKeyword}
                       </Link>
+                      */}
                     </div>
                   </div>
                 ))}
