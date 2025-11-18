@@ -302,6 +302,8 @@ export default function LocationDetailPage({ params }) {
     notFound();
   }
 
+  // Geçici olarak içerik yorum satırı yapıldı - Coming Soon gösteriliyor
+  /*
   const { intro, faqs, seo, office } = location;
 
   const faqSchema = {
@@ -420,6 +422,29 @@ export default function LocationDetailPage({ params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
       />
+    </div>
+  );
+  */
+
+  // Coming Soon sayfası
+  return (
+    <div style={{ overflow: 'hidden' }}>
+      <HeaderFour />
+      <Breadcumb title="Location Details" bgImage="/main-assets/image/locations-bg.jpg" bgPosition="center 25%" />
+      <section className="space" style={{ padding: '120px 0' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto' }}>
+            <h1 style={{ fontSize: '48px', fontWeight: 700, color: '#0f172a', marginBottom: '24px' }}>
+              Coming Soon
+            </h1>
+            <p style={{ fontSize: '18px', color: '#475569', lineHeight: 1.7 }}>
+              This location page is currently under development. Please check back soon for detailed information.
+            </p>
+          </div>
+        </div>
+      </section>
+      <FooterThree />
+      <Scroll />
     </div>
   );
 }
