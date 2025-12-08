@@ -32,12 +32,138 @@ export function generateMetadata({ params }) {
   }
 
   const { seo, office } = location;
+
   const keywords = [
     location.primaryKeyword,
     `${office.city} marine safety`,
     `${office.country} lifeboat service`,
     `${office.country} fire-fighting equipment`,
     `${office.country} SOLAS service station`,
+    `${office.country} Liferaft services`,
+    `${office.country} LSA service`,
+    `${office.country} Life saving equipment`,
+    `${office.country} Pilot ladder inspection`,
+    `${office.country} Fixed fire system maintenance`,
+    `${office.country} Portable fire extinguisher service`,
+    `${office.country} Breathing apparatus inspection`,
+    `${office.country} EEBD inspection`,
+    `${office.country} Gas detection system calibration`,
+    `${office.country} Crane load testing`,
+    `${office.country} Marine safety inspection`,
+    `${office.country} Marine safety equipment supply`,
+    `${office.country} Marine safety equipment repair`,
+    `${office.country} Marine safety equipment maintenance`,
+    `${office.country} Marine safety equipment calibration`,
+    `${office.country} Marine safety equipment inspection`,
+    `${office.country} Marine safety equipment service`,
+    `${office.country} Fire extinguisher inspection`,
+    `${office.country} Fire extinguisher service`,
+    `${office.country} Fire extinguisher supply`,
+    `${office.country} Fire extinguisher repair`,
+    `${office.country} Fire extinguisher maintenance`,
+    `${office.country} Fire extinguisher inspection`,
+    `${office.country} Co2 system inspection`,
+    `${office.country} Gas detector calibration`,
+    `${office.country} Fire detection system calibration`,
+    `${office.country} Fire alarm system calibration`,
+    `${office.country} Fire alarm system repair`,
+    `${office.country} Fire alarm system maintenance`,
+    `${office.country} Fire alarm system inspection`,
+    `${office.country} Fire alarm system service`,
+    `${office.country} Fire alarm system supply`,
+    `${office.country} Fire alarm system repair`,
+    `${office.country} Fire hose testing`,
+    `${office.country} Fire nozzle testing`,
+    `${office.country} Fire pump testing`,
+    `${office.country} Fire pump maintenance`,
+    `${office.country} Fire pump inspection`,
+    `${office.country} Fire pump service`,
+    `${office.country} Fire pump supply`,
+    `${office.country} Fire pump repair`,
+    `${office.country} Fire pump maintenance`,
+    `${office.country} Foam quality testing`,
+    `${office.country} Foam analysis`,
+    `${office.country} Self contained breathing apparatus inspection`,
+    `${office.country} Self contained breathing apparatus service`,
+    `${office.country} Self contained breathing apparatus supply`,
+    `${office.country} Self contained breathing apparatus repair`,
+    `${office.country} Self contained breathing apparatus maintenance`,
+    `${office.country} Self contained breathing apparatus inspection`,
+    `${office.country} Self contained breathing apparatus service`,
+    `${office.country} Self contained breathing apparatus supply`,
+    `${office.country} Self contained breathing apparatus repair`,
+    `${office.country} Self contained breathing apparatus maintenance`,
+    `${office.country} Emergency escape breathing apparatus inspection`,
+    `${office.country} Emergency escape breathing apparatus service`,
+    `${office.country} Emergency escape breathing apparatus supply`,
+    `${office.country} Emergency escape breathing apparatus repair`,
+    `${office.country} Emergency escape breathing apparatus maintenance`,
+    `${office.country} Emergency escape breathing apparatus inspection`,
+    `${office.country} Emergency escape breathing apparatus service`,
+    `${office.country} Emergency escape breathing apparatus supply`,
+    `${office.country} Emergency escape breathing apparatus repair`,
+    `${office.country} Inflatable lifejackets inspection`,
+    `${office.country} Inflatable lifejackets service`,
+    `${office.country} Inflatable lifejackets supply`,
+    `${office.country} Inflatable lifejackets repair`,
+    `${office.country} Inflatable lifejackets maintenance`,
+    `${office.country} Inflatable lifejackets inspection`,
+    `${office.country} Inflatable lifejackets service`,
+    `${office.country} Inflatable lifejackets supply`,
+    `${office.country} Immersion suit inspection`,
+    `${office.country} Immersion suit service`,
+    `${office.country} Immersion suit supply`,
+    `${office.country} Immersion suit repair`,
+    `${office.country} Immersion suit maintenance`,
+    `${office.country} Immersion suit inspection`,
+    `${office.country} Immersion suit service`,
+    `${office.country} Immersion suit supply`,
+    `${office.country} Chemical suit inspection`,
+    `${office.country} Chemical suit service`,
+    `${office.country} Chemical suit supply`,
+    `${office.country} Chemical suit repair`,
+    `${office.country} Chemical suit maintenance`,
+    `${office.country} Chemical suit inspection`,
+    `${office.country} Chemical suit service`,
+    `${office.country} Chemical suit supply`,
+    `${office.country} Chemical suit repair`,
+    `${office.country} Fireman suit inspection`,
+    `${office.country} Fireman suit service`,
+    `${office.country} Fireman suit supply`,
+    `${office.country} Fireman suit repair`,
+    `${office.country} Fireman suit maintenance`,
+    `${office.country} Fireman suit inspection`,
+    `${office.country} Fireman suit service`,
+    `${office.country} Fireman suit supply`,
+    `${office.country} Fireman suit repair`,
+    `${office.country} Life saving equipment inspection`,
+    `${office.country} Life saving equipment service`,
+    `${office.country} Life saving equipment supply`,
+    `${office.country} Life saving equipment repair`,
+    `${office.country} Life saving equipment maintenance`,
+    `${office.country} Life saving equipment inspection`,
+    `${office.country} Life saving equipment service`,
+    `${office.country} Life saving equipment supply`,
+    `${office.country} Life saving equipment repair`,
+    `${office.country} Rescue boat inspection`,
+    `${office.country} Rescue boat service`,
+    `${office.country} Rescue boat supply`,
+    `${office.country} Rescue boat repair`,
+    `${office.country} Rescue boat maintenance`,
+    `${office.country} Rescue boat inspection`,
+    `${office.country} Rescue boat service`,
+    `${office.country} Rescue boat supply`,
+    `${office.country} Rescue boat repair`,
+    `${office.country} Free fall boat inspection`,
+    `${office.country} Free fall boat service`,
+    `${office.country} Free fall boat supply`,
+    `${office.country} Free fall boat repair`,
+    `${office.country} Free fall boat maintenance`,
+    `${office.country} Free fall boat inspection`,
+    `${office.country} Free fall boat service`,
+    `${office.country} Free fall boat supply`,
+    `${office.country} Fire pump maintenance`
+
   ].filter(Boolean);
 
   const canonicalUrl = seo.canonical || `${siteUrl}/locations/${location.slug}`;
@@ -74,31 +200,6 @@ export function generateMetadata({ params }) {
   };
 }
 
-const SectionTitle = ({ eyebrow, title, description }) => (
-  <div className="title-area mb-30 text-center">
-    {eyebrow && (
-      <p className="sec-subtitle" style={{ color: '#0ea5e9', fontWeight: 600, letterSpacing: '0.08em' }}>
-        {eyebrow}
-      </p>
-    )}
-    <h2 className="sec-title" style={{ marginBottom: description ? '16px' : 0 }}>
-      {title}
-    </h2>
-    {description && (
-      <p className="sec-text" style={{ lineHeight: 1.6, maxWidth: '780px', margin: '0 auto' }}>
-        {description}
-      </p>
-    )}
-  </div>
-);
-
-const HighlightCard = ({ label, description }) => (
-  <div className="feature-card" style={{ padding: '28px 24px', borderRadius: '12px', border: '1px solid #e5e7eb', backgroundColor: '#ffffff', height: '100%', boxShadow: '0 10px 35px -15px rgba(15, 23, 42, 0.25)' }}>
-    <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#0f172a', marginBottom: '12px' }}>{label}</h3>
-    <p style={{ margin: 0, color: '#475569', lineHeight: 1.6 }}>{description}</p>
-  </div>
-);
-
 const ListCard = ({ title, items }) => (
   <div className="feature-card" style={{ padding: '28px 24px', borderRadius: '12px', border: '1px solid #e2e8f0', backgroundColor: '#ffffff', height: '100%' }}>
     <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#0f172a', marginBottom: '16px' }}>{title}</h3>
@@ -112,38 +213,17 @@ const ListCard = ({ title, items }) => (
   </div>
 );
 
-const FaqAccordion = ({ faqs }) => (
-  <div className="faq-wrap" style={{ maxWidth: '940px', margin: '0 auto' }}>
-    {faqs.map((faq, index) => (
-      <div
-        key={faq.question}
-        style={{
-          border: '1px solid #e2e8f0',
-          borderRadius: '12px',
-          padding: '20px 24px',
-          marginBottom: index === faqs.length - 1 ? 0 : '16px',
-          backgroundColor: '#ffffff',
-          boxShadow: '0 12px 40px -24px rgba(15, 23, 42, 0.35)',
-        }}
-      >
-        <h3 style={{ fontSize: '18px', marginBottom: '10px', color: '#0f172a', fontWeight: 700 }}>{faq.question}</h3>
-        <p style={{ margin: 0, color: '#475569', lineHeight: 1.7 }}>{faq.answer}</p>
-      </div>
-    ))}
-  </div>
-);
-
 const LocationHero = ({ location }) => {
-  const { office, intro, emergency, serviceHighlights } = location;
+  const { office, intro } = location;
   return (
     <section className="location-hero" style={{ padding: '110px 0 90px', background: '#0f172a', color: '#f8fafc', position: 'relative', overflow: 'hidden' }}>
       <div className="container">
         <div className="row align-items-center gy-4">
-          <div className="col-lg-7">
+          <div className="col-lg-12">
             <p style={{ color: '#38bdf8', fontWeight: 600, letterSpacing: '0.12em', marginBottom: '16px' }}>
               {location.primaryKeyword.toUpperCase()}
             </p>
-            <h1 style={{ fontSize: '42px', lineHeight: 1.2, marginBottom: '18px', fontWeight: 700 }}>{intro.headline}</h1>
+            <h1 style={{ fontSize: '42px', lineHeight: 1.2, marginBottom: '18px', fontWeight: 700, color: '#ffffff' }}>{location.seo.title}</h1>
             <p style={{ fontSize: '18px', lineHeight: 1.7, color: '#cbd5f5', marginBottom: '26px' }}>{intro.summary}</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
               <a
@@ -180,37 +260,6 @@ const LocationHero = ({ location }) => {
               </a>
             </div>
           </div>
-          <div className="col-lg-5">
-            <div style={{ display: 'grid', gap: '16px' }}>
-              {serviceHighlights.map((highlight) => (
-                <div
-                  key={highlight.label}
-                  style={{
-                    padding: '20px 20px',
-                    borderRadius: '16px',
-                    backgroundColor: 'rgba(15, 23, 42, 0.65)',
-                    border: '1px solid rgba(148, 163, 184, 0.35)',
-                  }}
-                >
-                  <p style={{ fontSize: '15px', color: '#38bdf8', fontWeight: 600, marginBottom: '6px', letterSpacing: '0.08em' }}>
-                    {highlight.label}
-                  </p>
-                  <p style={{ fontSize: '15px', color: '#e2e8f0', lineHeight: 1.6, margin: 0 }}>{highlight.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-        <div style={{ marginTop: '42px', padding: '24px', borderRadius: '16px', backgroundColor: 'rgba(15, 23, 42, 0.55)', border: '1px solid rgba(148, 163, 184, 0.3)' }}>
-          <p style={{ margin: 0, color: '#38bdf8', fontWeight: 600, letterSpacing: '0.08em' }}>{emergency.title}</p>
-          <p style={{ margin: '8px 0 16px', color: '#cbd5f5', lineHeight: 1.6 }}>{emergency.description}</p>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '18px', fontWeight: 600 }}>
-            <span>Phone: <a href={`tel:${emergency.phone}`} style={{ color: '#38bdf8', textDecoration: 'none' }}>{emergency.phone}</a></span>
-            {emergency.mobile && (
-              <span>Mobile: <a href={`tel:${emergency.mobile}`} style={{ color: '#38bdf8', textDecoration: 'none' }}>{emergency.mobile}</a></span>
-            )}
-            <span>Email: <a href={`mailto:${emergency.email}`} style={{ color: '#38bdf8', textDecoration: 'none' }}>{emergency.email}</a></span>
-          </div>
         </div>
       </div>
     </section>
@@ -218,7 +267,7 @@ const LocationHero = ({ location }) => {
 };
 
 const LocationDetails = ({ location }) => {
-  const { office, services, industries, coverage, certifications } = location;
+  const { office, services, coverage } = location;
 
   return (
     <section className="space">
@@ -260,33 +309,13 @@ const LocationDetails = ({ location }) => {
             <ListCard title="Core Services" items={services} />
           </div>
           <div className="col-lg-6">
-            <ListCard title="Industries We Support" items={industries} />
-          </div>
-        </div>
-
-        <div className="row gy-4" style={{ marginTop: '32px' }}>
-          <div className="col-lg-6">
             <div style={{ padding: '28px 24px', borderRadius: '12px', border: '1px solid #e2e8f0', backgroundColor: '#f8fafc', height: '100%' }}>
               <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#0f172a', marginBottom: '16px' }}>{coverage.title}</h3>
-              <ul style={{ paddingLeft: '18px', margin: 0, color: '#475569', lineHeight: 1.6 }}>
-                {coverage.ports.map((port) => (
-                  <li key={port} style={{ marginBottom: '8px' }}>
-                    {port}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <div className="col-lg-6">
-            <div style={{ padding: '28px 24px', borderRadius: '12px', border: '1px solid #e2e8f0', backgroundColor: '#ffffff', height: '100%' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#0f172a', marginBottom: '16px' }}>Approval Matrix</h3>
-              <ul style={{ paddingLeft: '18px', margin: 0, color: '#475569', lineHeight: 1.6 }}>
-                {certifications.map((certificate) => (
-                  <li key={certificate} style={{ marginBottom: '8px' }}>
-                    {certificate}
-                  </li>
-                ))}
-              </ul>
+              <p style={{ margin: 0, color: '#475569', lineHeight: 1.6 }}>
+                {location.harbours && location.harbours.length > 0 
+                  ? [...coverage.ports, ...location.harbours].join(', ')
+                  : coverage.ports.join(', ')}
+              </p>
             </div>
           </div>
         </div>
@@ -302,22 +331,8 @@ export default function LocationDetailPage({ params }) {
     notFound();
   }
 
-  // Geçici olarak içerik yorum satırı yapıldı - Coming Soon gösteriliyor
-  /*
-  const { intro, faqs, seo, office } = location;
+  const { intro, seo, office } = location;
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: location.faqs.map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.answer,
-      },
-    })),
-  };
 
   const businessSchema = {
     '@context': 'https://schema.org',
@@ -356,95 +371,13 @@ export default function LocationDetailPage({ params }) {
       <HeaderFour />
       <Breadcumb title={intro.headline} bgImage="/main-assets/image/locations-bg.jpg" bgPosition="center 25%" />
       <LocationHero location={location} />
-      <section className="space-bottom">
-        <div className="container">
-          <SectionTitle eyebrow="Why Task-in Services" title={intro.subheading} description={location.intro.summary} />
-          <div className="row gy-4">
-            {location.serviceHighlights.map((highlight) => (
-              <div className="col-md-6 col-lg-4" key={highlight.label}>
-                <HighlightCard label={highlight.label} description={highlight.description} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {location.seo.focusAreas?.length > 0 && (
-        <section className="space-top">
-          <div className="container">
-            <SectionTitle
-              eyebrow="Priority Search Phrases"
-              title={`${location.shortName} Marine Safety Search Demand`}
-              description="See the high-intent queries we optimise for to help operators discover Task-in Services when searching for compliance support."
-            />
-            <div className="row gy-3 justify-content-center">
-              {location.seo.focusAreas.map((keyword) => (
-                <div className="col-md-6 col-lg-3" key={keyword}>
-                  <div
-                    style={{
-                      padding: '18px 20px',
-                      borderRadius: '12px',
-                      border: '1px solid #bfdbfe',
-                      backgroundColor: '#eff6ff',
-                      color: '#1d4ed8',
-                      fontWeight: 600,
-                      minHeight: '100%',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      textAlign: 'center',
-                    }}
-                  >
-                    {keyword}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
       <LocationDetails location={location} />
-      <section className="space">
-        <div className="container">
-          <SectionTitle eyebrow="FAQs" title={`Frequently Asked Questions – ${location.shortName}`} description={`Common queries about ${location.primaryKeyword} and how Task-in Services keeps your fleet compliant.`} />
-          <FaqAccordion faqs={faqs} />
-        </div>
-      </section>
-      <section className="space">
-        <Contact />
-      </section>
       <FooterThree />
       <Scroll />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
       />
-    </div>
-  );
-  */
-
-  // Coming Soon sayfası
-  return (
-    <div style={{ overflow: 'hidden' }}>
-      <HeaderFour />
-      <Breadcumb title="Location Details" bgImage="/main-assets/image/locations-bg.jpg" bgPosition="center 25%" />
-      <section className="space" style={{ padding: '120px 0' }}>
-        <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto' }}>
-            <h1 style={{ fontSize: '48px', fontWeight: 700, color: '#0f172a', marginBottom: '24px' }}>
-              Coming Soon
-            </h1>
-            <p style={{ fontSize: '18px', color: '#475569', lineHeight: 1.7 }}>
-              This location page is currently under development. Please check back soon for detailed information.
-            </p>
-          </div>
-        </div>
-      </section>
-      <FooterThree />
-      <Scroll />
     </div>
   );
 }

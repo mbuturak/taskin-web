@@ -211,6 +211,9 @@ const Locations = () => {
           ${location.mobile ? `<div style=\"margin-bottom: 4px;\"><strong>Mobile:</strong> <a href=\"tel:${location.mobile}\" style=\"color: #3B82F6; text-decoration: none;\">${location.mobile}</a></div>` : ''}
           <div><strong>Email:</strong> <a href="mailto:${location.email}" style="color: #3B82F6; text-decoration: none;">${location.email}</a></div>
         </div>
+        <div style="text-align: center; margin-top: 12px;">
+          <a href="${location.canonical}" style="display: inline-block; padding: 10px 16px; background-color: #2563eb; color: #ffffff; border-radius: 6px; text-decoration: none; font-weight: 600;">View ${location.primaryKeyword}</a>
+        </div>
       </div>
     `;
 
@@ -385,7 +388,6 @@ const Locations = () => {
                       {location.country}
                     </p>
                     <div style={{ marginTop: '12px' }}>
-                      {/* Geçici olarak devre dışı bırakıldı
                       <Link
                         href={location.path}
                         style={{
@@ -397,7 +399,6 @@ const Locations = () => {
                       >
                         Explore {location.primaryKeyword}
                       </Link>
-                      */}
                     </div>
                   </div>
                 ))}
