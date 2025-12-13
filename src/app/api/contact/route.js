@@ -27,20 +27,96 @@ export async function POST(request) {
       );
     }
 
-    // E-posta taşıyıcı (gerekirse havuzlamak için minimal konfig)
-    const transporter = nodemailer.createTransport({
+    // Debug: Environment değişkenlerini kontrol et (şifre hariç)
+    console.log('SMTP Configuration:', {
       host: process.env.NEXT_PUBLIC_SMTP_HOST,
-      port: parseInt(process.env.NEXT_PUBLIC_SMTP_PORT),
-      secure: process.env.NEXT_PUBLIC_SMTP_SECURE === 'true',
-      requireTLS: true,
+      port: process.env.NEXT_PUBLIC_SMTP_PORT,
+      secure: process.env.NEXT_PUBLIC_SMTP_SECURE,
+      user: process.env.NEXT_PUBLIC_SMTP_USER,
+      hasPassword: !!process.env.NEXT_PUBLIC_SMTP_PASS,
+    });
+
+    // E-posta taşıyıcı - Office 365 için optimize edilmiş konfigürasyon
+    // Office 365 için farklı port ve ayar kombinasyonları denenecek
+    const smtpConfig = {
+      host: process.env.NEXT_PUBLIC_SMTP_HOST || 'smtp.office365.com',
+      port: parseInt(process.env.NEXT_PUBLIC_SMTP_PORT) || 587,
+      secure: false, // Port 587 için her zaman false (STARTTLS kullanılır)
+      requireTLS: true, // Office 365 için STARTTLS zorunlu
       auth: {
         user: process.env.NEXT_PUBLIC_SMTP_USER,
         pass: process.env.NEXT_PUBLIC_SMTP_PASS,
       },
-    });
+      // TLS ayarları - Office 365 için optimize
+      tls: {
+        minVersion: 'TLSv1.2',
+        rejectUnauthorized: true, // Sertifika doğrulaması aktif
+      },
+      connectionTimeout: 30000, // 30 saniye (artırıldı)
+      greetingTimeout: 30000,
+      socketTimeout: 30000,
+      // Connection pool ayarları
+      pool: false, // Pool'u kapatıyoruz, bazı durumlarda sorun çıkarabiliyor
+      debug: true, // Debug modunu açıyoruz
+      logger: true, // Logger'ı açıyoruz
+    };
 
-    // Verify connection configuration (will throw on failure)
-    await transporter.verify();
+    const transporter = nodemailer.createTransport(smtpConfig);
+
+    // Verify connection configuration - Office 365 için özel kontroller
+    try {
+      console.log('Verifying SMTP connection...');
+      await transporter.verify();
+      console.log('SMTP connection verified successfully');
+    } catch (verifyError) {
+      console.error('SMTP Connection verification failed:', {
+        code: verifyError.code,
+        responseCode: verifyError.responseCode,
+        command: verifyError.command,
+        response: verifyError.response,
+        message: verifyError.message,
+      });
+      
+      // SMTP AUTH hatası için özel mesaj
+      if (verifyError.code === 'EAUTH' && verifyError.responseCode === 535) {
+        const errorResponse = verifyError.response || '';
+        let troubleshooting = [];
+        
+        if (errorResponse.includes('SmtpClientAuthentication is disabled')) {
+          troubleshooting = [
+            '1. PowerShell ile: Set-TransportConfig -SmtpClientAuthenticationDisabled $false',
+            '2. Kullanıcı seviyesinde: Set-CASMailbox -Identity automation@taskinservices.com -SmtpClientAuthenticationDisabled $false',
+            '3. Ayarların yayılması için 15-30 dakika bekleyin'
+          ];
+        } else if (errorResponse.includes('did not meet the criteria')) {
+          troubleshooting = [
+            '1. Security Defaults\'u kontrol edin: Azure AD > Properties > Manage Security defaults (kapalı olmalı)',
+            '2. Conditional Access politikalarını kontrol edin',
+            '3. Şifrenin doğru olduğundan emin olun',
+            '4. MFA\'nın tamamen kapatıldığından emin olun',
+            '5. Ayarların yayılması için 15-30 dakika bekleyin'
+          ];
+        } else {
+          troubleshooting = [
+            '1. Şifrenin doğru olduğundan emin olun',
+            '2. MFA\'nın tamamen kapatıldığından emin olun',
+            '3. Security Defaults kapalı olmalı',
+            '4. Ayarların yayılması için 15-30 dakika bekleyin'
+          ];
+        }
+        
+        return NextResponse.json(
+          { 
+            error: 'SMTP Authentication failed',
+            message: verifyError.response || 'Authentication unsuccessful',
+            troubleshooting,
+            details: 'Visit https://aka.ms/smtp_auth_disabled for more information.'
+          },
+          { status: 500 }
+        );
+      }
+      throw verifyError;
+    }
 
     // Email content
     const emailSubject = subject || `New Contact Form Submission - General Inquiry`;
@@ -98,9 +174,44 @@ export async function POST(request) {
     );
 
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error('Error sending email:', {
+      code: error.code,
+      responseCode: error.responseCode,
+      command: error.command,
+      response: error.response,
+      message: error.message,
+      stack: error.stack,
+    });
+    
+    // SMTP AUTH hatası için özel mesaj
+    if (error.code === 'EAUTH' && error.responseCode === 535) {
+      return NextResponse.json(
+        { 
+          error: 'SMTP Authentication failed',
+          message: 'SmtpClientAuthentication is disabled for the Tenant.',
+          troubleshooting: [
+            '1. Microsoft 365 Admin Center > Settings > Org settings > Modern authentication > Authenticated SMTP\'yi etkinleştirin',
+            '2. PowerShell ile: Set-TransportConfig -SmtpClientAuthenticationDisabled $false',
+            '3. Kullanıcı seviyesinde: Set-CASMailbox -Identity automation@taskinservices.com -SmtpClientAuthenticationDisabled $false',
+            '4. MFA aktifse App Password kullanın (normal şifre yerine)',
+            '5. Security Defaults kapalı olmalı',
+            '6. Ayarların yayılması için 15-30 dakika bekleyin'
+          ],
+          details: 'Visit https://aka.ms/smtp_auth_disabled for more information.',
+          response: error.response
+        },
+        { status: 500 }
+      );
+    }
+    
+    // Diğer hatalar için genel mesaj
     return NextResponse.json(
-      { error: 'Failed to send email' },
+      { 
+        error: 'Failed to send email',
+        message: error.message || 'Unknown error occurred',
+        code: error.code,
+        response: error.response
+      },
       { status: 500 }
     );
   }

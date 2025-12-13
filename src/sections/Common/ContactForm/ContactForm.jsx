@@ -21,12 +21,6 @@ const officeLocations = [
     email: "germany@taskinservices.com",
     location: "Germany"
   },
-  {
-    id: 4,
-    name: "Task-in USA",
-    email: "ops@taskinusa.com",
-    location: "USA"
-  }
 ];
 
 const ContactForm = ({theme = 'light'}) => {

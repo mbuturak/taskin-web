@@ -40,19 +40,6 @@ const officeLocations = [
     coordinates: { lat: 53.383758289802365, lng: 9.988224654570441 },
     services: ["European Operations", "Marine Services", "Logistics"]
   },
-  {
-    id: 4,
-    name: "Task-In USA",
-    address: "108 Alliant Dr Suite B",
-    city: "Houston, TX 77032",
-    country: "United States",
-    phone: "+1 713 682 9324",
-    mobile: "+1 281 348 6929",
-    email: "ops@taskinusa.com",
-    contact: "Cem Kara – Branch Manager",
-    coordinates: { lat: 29.931808702304476, lng: -95.31948843727211 },
-    services: ["US Operations", "Marine Services", "Port Services", "Logistics"]
-  }
 ];
 
 const MapWithAddressList = () => {
