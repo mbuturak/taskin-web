@@ -263,7 +263,7 @@ const Locations = () => {
               }              
               <p className="sec-text" style={{ lineHeight: '1.5', textAlign: 'center' }}>
               Task-in Services is a globally operating marine safety service provider headquartered in the Netherlands, with three 
-              strategically located branches. We extend our services across 60 ports in ARA, Europe, Scandinavia and the Baltics, and USA, providing fast, regulation-compliant support wherever needed.
+              strategically located branches. We extend our services across 60 ports in ARA, Europe, Scandinavia and the Baltics, providing fast, regulation-compliant support wherever needed.
               </p>
             </div>
           </div>

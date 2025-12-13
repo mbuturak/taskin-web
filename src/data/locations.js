@@ -258,62 +258,6 @@ export const locations = [
       'Rostock-Warnemünde',
     ],
   },
-  {
-    id: 'us',
-    slug: 'marine-safety-usa',
-    shortName: 'United States',
-    primaryKeyword: 'Marine Safety USA',
-    office: {
-      name: 'Task-in Services USA',
-      addressLine1: '108 Alliant Dr Suite B',
-      city: 'Houston, TX 77032',
-      region: 'Texas',
-      country: 'United States',
-      postalCode: '77032',
-      contact: 'Cem Kara – Branch Manager',
-      phone: '+1 713 682 9324',
-      mobile: '+1 281 348 6929',
-      email: 'ops@taskinusa.com',
-      flag: '/main-assets/image/flag/usa.jpg',
-    },
-    geo: {
-      lat: 29.931808702304476,
-      lng: -95.31948843727211,
-    },
-    mapEmbedUrl: 'https://www.google.com/maps?q=108+Alliant+Dr+Suite+B+Houston+TX+77032&hl=en&z=11&output=embed',
-    seo: {
-      title: 'Task-in Services USA',
-      description:
-        'Task-in Services USA delivers SOLAS-compliant lifeboat, davit, fixed fire system and gas detection support across Gulf Coast ports with 24/7 emergency mobilisation.',
-      canonical: `${siteUrl}/locations/marine-safety-usa`,
-    },
-    intro: {
-      headline: 'Task-in Services USA',
-      summary:
-        'Task-in Services USA ensures your vessels remain fully compliant with SOLAS, FSS, class, and flag-state requirements.',
-    },
-    services: [
-      'Lifeboat and launching appliance servicing and testing',
-      'Firefighting system inspections (foam, CO₂, powder, smoke detection)',
-      'Fire extinguisher inspection and servicing',
-      'Foam concentrate and dry powder analysis',
-      'SCBA inspection and maintenance',
-      'EEBD inspection and maintenance',
-      'Calibration of portable and fixed gas analysing equipment',
-      'ODME servicing and calibration',
-      'Oily Water Separator (15 ppm) servicing and calibration',
-      'Ultrasonic oil/water interface tape calibration',
-      'Medical oxygen inspections, refilling, and related services',
-      'Inspection and servicing of inflatable lifejackets',
-      'Inspection of immersion suits and chemical protective suits',
-      'Crane load testing',
-      'Marine safety equipment and spare parts supply'
-    ],
-    coverage: {
-      title: 'Gulf Coast Coverage',
-      ports: ['Houston & Galveston', 'Port Arthur & Beaumont', 'Port Fourchon', 'Corpus Christi', 'New Orleans', 'Mobile'],
-    },
-  },
 ];
 
 export const locationsBySlug = Object.fromEntries(locations.map((location) => [location.slug, location]));
