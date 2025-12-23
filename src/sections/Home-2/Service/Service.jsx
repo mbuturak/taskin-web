@@ -30,7 +30,7 @@ const Service = () => {
                                         />
                                     </div>
                                     <h4 className="service-card_title" style={{ marginTop: '15px', textAlign: 'center' }}>
-                                        <Link href="/services">FFE SERVICES</Link>
+                                        <Link href="/ffe-service-finland">FFE SERVICES</Link>
                                     </h4>
                                 </div>
                             </div>
@@ -54,7 +54,7 @@ const Service = () => {
                                         />
                                     </div>
                                     <h4 className="service-card_title" style={{ marginTop: '15px', marginBottom: '10px', textAlign: 'center' }}>
-                                        <Link href="/services">LSE SERVICES</Link>
+                                        <Link href="/lse-service-finland">LSE SERVICES</Link>
                                     </h4>
                                 </div>
                             </div>
@@ -78,7 +78,7 @@ const Service = () => {
                                         />
                                     </div>
                                     <h4 className="service-card_title" style={{ marginTop: '15px', marginBottom: '10px', textAlign: 'center' }}>
-                                        <Link href="/services">LSA SERVICES</Link>
+                                        <Link href="/lsa-lifeboat-service">LSA SERVICES</Link>
                                     </h4>
                                 </div>
                             </div>
@@ -102,7 +102,7 @@ const Service = () => {
                                         />
                                     </div>
                                     <h4 className="service-card_title" style={{ marginTop: '15px', marginBottom: '10px', textAlign: 'center' }}>
-                                        <Link href="/services">CALIBRATION SERVICES</Link>
+                                        <Link href="/calibration-service-finland">CALIBRATION SERVICES</Link>
                                     </h4>
                                 </div>
                             </div>
@@ -127,7 +127,7 @@ const Service = () => {
                                         />
                                     </div>
                                     <h4 className="service-card_title" style={{ marginTop: '15px', marginBottom: '10px', textAlign: 'center' }}>
-                                        <Link href="/services">LOAD TEST</Link>
+                                        <Link href="/crane-load-test-finland">LOAD TEST</Link>
                                     </h4>
 
                                 </div>

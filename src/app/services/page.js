@@ -28,7 +28,7 @@ export default function ServicesPage() {
     const services = [
         {
             title: "FFE SERVICES",
-            href: "/",
+            href: "/ffe-service-finland",
             img: [
                 { src: "/main-assets/image/ffe2.jpg", style: { objectPosition: "center 60%" } },
                 { src: "/main-assets/image/ffe-2.jpg", style: { objectPosition: "center 25%" } },
@@ -49,7 +49,7 @@ export default function ServicesPage() {
         },
         {
             title: "LSE SERVICES",
-            href: "/",
+            href: "/lse-service-finland",
             img: [
                 { src: "/main-assets/image/lse.jpg", style: { objectPosition: "center 45%" } },
                 { src: "/main-assets/image/lse-2.jpg", style: { objectPosition: "center 75%" } },
@@ -63,7 +63,7 @@ export default function ServicesPage() {
         },
         {
             title: "LSA SERVICES",
-            href: "/",
+            href: "/lsa-lifeboat-service",
             img: [
                 { src: "/main-assets/image/lsa.jpeg", style: { objectPosition: "center 60%" } },
                 { src: "/main-assets/image/lsa-2.jpg", style: { objectPosition: "center 60%" } },
@@ -78,7 +78,7 @@ export default function ServicesPage() {
         },
         {
             title: "CALIBRATION SERVICES",
-            href: "/",
+            href: "/calibration-service-finland",
             img: [
                 { src: "/main-assets/image/calibration.jpg", style: { objectPosition: "center 30%" } },
                 { src: "/main-assets/image/calibration-2.jpg", style: { objectPosition: "center 60%" } },
@@ -91,7 +91,7 @@ export default function ServicesPage() {
         },
         {
             title: "CRANE LOAD TEST",
-            href: "/",
+            href: "/crane-load-test-finland",
             img: [
                 { src: "/main-assets/image/crane-load.jpeg", style: { objectPosition: "center 60%" } },
                 { src: "/main-assets/image/crane-3.jpg", style: { objectPosition: "center 100%" } },
@@ -105,7 +105,7 @@ export default function ServicesPage() {
         },
         {
             title: "MEDICAL OXYGEN",
-            href: "/",
+            href: "/medical-oxygen-service-finland",
             img: [
                 { src: "https://oxygenwallah.com/wp-content/uploads/elementor/thumbs/Add-a-heading-11-rbcovcg8p1aze36i99lu4chdisce3byaqw6c9cjct0.webp", style: { objectPosition: "center 60%" } },
                 { src: "/main-assets/image/medical-2.jpg", style: { objectPosition: "center 60%" } },
@@ -117,7 +117,7 @@ export default function ServicesPage() {
         },
         {
             title: "LADDERS",
-            href: "/",
+            href: "/ladder-service-finland",
             img: [
                 { src: "/main-assets/image/ladders.jpg", style: { objectPosition: "center 100%" } },
                 { src: "/main-assets/image/ladders-2.jpg", style: { objectPosition: "center 60%" } },
