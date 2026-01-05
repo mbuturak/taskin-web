@@ -6,7 +6,7 @@ import Script from 'next/script';
 import CookiebotListener from '../components/CookiebotListener';
 import siteUrl from '~/utils/siteUrl';
 import "~/public/main-assets/css/fonts.css";
-const defaultTitle = 'Task-in Services | Global Marine & LSE Experts';
+const defaultTitle = 'Task-in Services | Global Marine LSE & FFE Experts ';
 const defaultDescription =
   'Task-in Services delivers certified marine safety, fire-fighting and life-saving equipment support across Europe and the United States with 24/7 rapid response teams.';
 
