@@ -90,7 +90,7 @@ export default function ServicesPage() {
                 "Inspection of portable and fixed gas detection systems, services and repairs, components renewal, sensors and parts supply, calibration gases, temperature gauges calibration, UTI calibration, ODME calibration, OWS (15 ppm) calibration, alcoholmeter calibration, analogue or digital pressure gauge calibrations, dynamometer calibrations, torque wrench calibrations, fire hoses, fire nozzles",
         },
         {
-            title: "CRANE LOAD TEST",
+            title: "CRANE LOAD TEST AND LIFTING APPLIANCES SURVEYS",
             href: "/crane-load-test-finland",
             img: [
                 { src: "/main-assets/image/crane-load.jpeg", style: { objectPosition: "center 60%" } },
