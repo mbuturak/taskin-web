@@ -30,7 +30,7 @@ const Service = () => {
                                         />
                                     </div>
                                     <h4 className="service-card_title" style={{ marginTop: '15px', textAlign: 'center' }}>
-                                        <Link href="/ffe-service-finland">FFE SERVICES</Link>
+                                        <Link href="/ffe-service">FFE SERVICES</Link>
                                     </h4>
                                 </div>
                             </div>
@@ -54,7 +54,7 @@ const Service = () => {
                                         />
                                     </div>
                                     <h4 className="service-card_title" style={{ marginTop: '15px', marginBottom: '10px', textAlign: 'center' }}>
-                                        <Link href="/lse-service-finland">LSE SERVICES</Link>
+                                        <Link href="/lse-service">LSE SERVICES</Link>
                                     </h4>
                                 </div>
                             </div>
@@ -102,7 +102,7 @@ const Service = () => {
                                         />
                                     </div>
                                     <h4 className="service-card_title" style={{ marginTop: '15px', marginBottom: '10px', textAlign: 'center' }}>
-                                        <Link href="/calibration-service-finland">CALIBRATION SERVICES</Link>
+                                        <Link href="/calibration-service">CALIBRATION SERVICES</Link>
                                     </h4>
                                 </div>
                             </div>
@@ -127,7 +127,7 @@ const Service = () => {
                                         />
                                     </div>
                                     <h4 className="service-card_title" style={{ marginTop: '15px', marginBottom: '10px', textAlign: 'center' }}>
-                                        <Link href="/crane-load-test-finland">LOAD TEST</Link>
+                                        <Link href="/crane-load-test">LOAD TEST</Link>
                                     </h4>
 
                                 </div>

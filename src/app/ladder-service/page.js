@@ -18,34 +18,29 @@ import "~/public/main-assets/css/slick.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export default function CalibrationServiceFinlandPage() {
+export default function LadderServicePage() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "serviceType": "Calibration Service",
-    "name": "Calibration Service Finland",
-    "description": "Inspection of portable and fixed gas detection systems, services and repairs, components renewal, sensors and parts supply, calibration gases, temperature gauges calibration, UTI calibration, ODME calibration, OWS (15 ppm) calibration, alcoholmeter calibration, analogue or digital pressure gauge calibrations, dynamometer calibrations, torque wrench calibrations, fire hoses, fire nozzles in Finland.",
+    "serviceType": "Ladder Service",
+    "name": "Ladder Service",
+    "description": "Inspection of pilot ladders, embarkation ladders, accommodation ladders, wire replacement for marine vessels.",
     "provider": {
       "@type": "Organization",
       "name": "Task-in Services",
       "url": siteUrl,
       "logo": `${siteUrl}/main-assets/img/logo.svg`
     },
-    "areaServed": {
-      "@type": "Country",
-      "name": "Finland"
-    },
     "availableChannel": {
       "@type": "ServiceChannel",
-      "serviceUrl": `${siteUrl}/calibration-service-finland`
+      "serviceUrl": `${siteUrl}/ladder-service`
     }
   };
 
   const images = [
-    { src: "/main-assets/image/calibration.jpg", alt: "Calibration service Finland marine equipment gas detection" },
-    { src: "/main-assets/image/calibration-2.jpg", alt: "Gas detection system calibration Finland" },
-    { src: "/main-assets/image/calibration-3.jpg", alt: "Pressure gauge calibration service Finland" },
-    { src: "/main-assets/image/calibration-4.jpg", alt: "ODME OWS calibration service Finland" }
+    { src: "/main-assets/image/ladders.jpg", alt: "Ladder service pilot embarkation accommodation" },
+    { src: "/main-assets/image/ladders-2.jpg", alt: "Pilot ladder inspection service" },
+    { src: "/main-assets/image/ladders-3.jpg", alt: "Accommodation ladder wire replacement" }
   ];
 
   return (
@@ -56,16 +51,16 @@ export default function CalibrationServiceFinlandPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <HeaderFour />
-      <Breadcumb title="CALIBRATION SERVICE FINLAND" bgImage="/main-assets/image/services-bg.jpg" />
+      <Breadcumb title="LADDER SERVICE" bgImage="/main-assets/image/services-bg.jpg" />
       <div className="service-area-2 overflow-hidden shape-mockup-wrap background-image" style={{ backgroundImage: "url('/main-assets/img/bg/service-bg1-1.png')" }}>
         <div className="container" style={{ marginTop: '50px', marginBottom: '50px' }}>
           <div className="row">
             <div className="col-12">
-              <h1 className="sec-title mb-4">Calibration Service Finland</h1>
+              <h1 className="sec-title mb-4">Ladder Service</h1>
               <p className="mb-4" style={{ fontSize: '18px', lineHeight: '1.8' }}>
-                Task-in Services provides professional calibration services for marine equipment throughout Finland. 
-                Our certified technicians ensure all your detection systems, gauges, and instruments are accurately 
-                calibrated and compliant with international standards.
+                Task-in Services provides professional ladder inspection and maintenance services for marine vessels.
+                Our certified technicians inspect pilot ladders, embarkation ladders, and
+                accommodation ladders to ensure compliance with SOLAS requirements.
               </p>
             </div>
           </div>
@@ -91,21 +86,14 @@ export default function CalibrationServiceFinlandPage() {
 
           <div className="row">
             <div className="col-12">
-              <h2 className="sec-title mb-3">Our Calibration Services Include:</h2>
+              <h2 className="sec-title mb-3">Our Ladder Services Include:</h2>
               <ul style={{ fontSize: '16px', lineHeight: '2' }}>
-                <li>Portable and fixed gas detection systems</li>
-                <li>Services, repairs, and components renewal</li>
-                <li>Sensors and parts supply</li>
-                <li>Calibration gases</li>
-                <li>Temperature gauges calibration</li>
-                <li>UTI calibration</li>
-                <li>ODME calibration</li>
-                <li>OWS (15 ppm) calibration</li>
-                <li>Alcoholmeter calibration</li>
-                <li>Analogue or digital pressure gauge calibrations</li>
-                <li>Dynamometer calibrations</li>
-                <li>Torque wrench calibrations</li>
-                <li>Fire hoses and fire nozzles</li>
+                <li>Inspection of pilot ladders</li>
+                <li>Embarkation ladders inspection</li>
+                <li>Accommodation ladders inspection</li>
+                <li>Wire replacement</li>
+                <li>SOLAS compliance documentation</li>
+                <li>Emergency repair services</li>
               </ul>
             </div>
           </div>
@@ -116,4 +104,3 @@ export default function CalibrationServiceFinlandPage() {
     </>
   );
 }
-

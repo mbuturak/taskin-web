@@ -18,34 +18,30 @@ import "~/public/main-assets/css/slick.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export default function MedicalOxygenServiceFinlandPage() {
+export default function MedicalOxygenServicePage() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
     "serviceType": "Medical Oxygen Service",
-    "name": "Medical Oxygen Service Finland",
-    "description": "Inspection of portable and fixed medical oxygen sets, refilling and hydrotesting of medical oxygen cylinders for marine vessels in Finland.",
+    "name": "Medical Oxygen Service",
+    "description": "Inspection of portable and fixed medical oxygen sets, refilling and hydrotesting of medical oxygen cylinders for marine vessels.",
     "provider": {
       "@type": "Organization",
       "name": "Task-in Services",
       "url": siteUrl,
       "logo": `${siteUrl}/main-assets/img/logo.svg`
     },
-    "areaServed": {
-      "@type": "Country",
-      "name": "Finland"
-    },
     "availableChannel": {
       "@type": "ServiceChannel",
-      "serviceUrl": `${siteUrl}/medical-oxygen-service-finland`
+      "serviceUrl": `${siteUrl}/medical-oxygen-service`
     }
   };
 
   const images = [
-    { src: "/main-assets/image/medical-2.jpg", alt: "Medical oxygen service Finland marine vessels" },
-    { src: "/main-assets/image/medical-3.jpg", alt: "Medical oxygen cylinder refilling Finland" },
-    { src: "/main-assets/image/medical-2.jpg", alt: "Medical oxygen inspection service Finland" },
-    { src: "/main-assets/image/medical-3.jpg", alt: "Medical oxygen hydrotesting Finland" }
+    { src: "/main-assets/image/medical-2.jpg", alt: "Medical oxygen service marine vessels" },
+    { src: "/main-assets/image/medical-3.jpg", alt: "Medical oxygen cylinder refilling" },
+    { src: "/main-assets/image/medical-2.jpg", alt: "Medical oxygen inspection service" },
+    { src: "/main-assets/image/medical-3.jpg", alt: "Medical oxygen hydrotesting" }
   ];
 
   return (
@@ -56,15 +52,15 @@ export default function MedicalOxygenServiceFinlandPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <HeaderFour />
-      <Breadcumb title="MEDICAL OXYGEN SERVICE FINLAND" bgImage="/main-assets/image/services-bg.jpg" />
+      <Breadcumb title="MEDICAL OXYGEN SERVICE" bgImage="/main-assets/image/services-bg.jpg" />
       <div className="service-area-2 overflow-hidden shape-mockup-wrap background-image" style={{ backgroundImage: "url('/main-assets/img/bg/service-bg1-1.png')" }}>
         <div className="container" style={{ marginTop: '50px', marginBottom: '50px' }}>
           <div className="row">
             <div className="col-12">
-              <h1 className="sec-title mb-4">Medical Oxygen Service Finland</h1>
+              <h1 className="sec-title mb-4">Medical Oxygen Service</h1>
               <p className="mb-4" style={{ fontSize: '18px', lineHeight: '1.8' }}>
-                Task-in Services provides professional medical oxygen services for marine vessels throughout Finland. 
-                Our certified technicians inspect, refill, and hydrotest medical oxygen cylinders to ensure 
+                Task-in Services provides professional medical oxygen services for marine vessels.
+                Our certified technicians inspect, refill, and hydrotest medical oxygen cylinders to ensure
                 compliance with all health and safety regulations.
               </p>
             </div>
@@ -109,4 +105,3 @@ export default function MedicalOxygenServiceFinlandPage() {
     </>
   );
 }
-

@@ -18,35 +18,31 @@ import "~/public/main-assets/css/slick.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export default function LSEServiceFinlandPage() {
+export default function LSEServicePage() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
     "serviceType": "Life Saving Equipment Service",
-    "name": "LSE Service Finland",
-    "description": "Inspection of lifejackets, spare parts supply, immersion suits, breathing apparatus and compressor air analyses, Emergency Escape Breathing Apparatus (EEBD), hydrostatic testing of steel and composite cylinders, fireman suits, gastight chemical suits, full body harnesses in Finland.",
+    "name": "LSE Service",
+    "description": "Inspection of lifejackets, spare parts supply, immersion suits, breathing apparatus and compressor air analyses, Emergency Escape Breathing Apparatus (EEBD), hydrostatic testing of steel and composite cylinders, fireman suits, gastight chemical suits, full body harnesses.",
     "provider": {
       "@type": "Organization",
       "name": "Task-in Services",
       "url": siteUrl,
       "logo": `${siteUrl}/main-assets/img/logo.svg`
     },
-    "areaServed": {
-      "@type": "Country",
-      "name": "Finland"
-    },
     "availableChannel": {
       "@type": "ServiceChannel",
-      "serviceUrl": `${siteUrl}/lse-service-finland`
+      "serviceUrl": `${siteUrl}/lse-service`
     }
   };
 
   const images = [
-    { src: "/main-assets/image/lse.jpg", alt: "LSE life saving equipment service Finland marine safety" },
-    { src: "/main-assets/image/lse-2.jpg", alt: "Lifejacket inspection service Finland" },
-    { src: "/main-assets/image/lse-3.jpg", alt: "Breathing apparatus service Finland" },
-    { src: "/main-assets/image/lse-4.jpg", alt: "Immersion suit inspection Finland" },
-    { src: "/main-assets/image/lse-5.jpg", alt: "EEBD emergency escape breathing apparatus Finland" }
+    { src: "/main-assets/image/lse.jpg", alt: "LSE life saving equipment service marine safety" },
+    { src: "/main-assets/image/lse-2.jpg", alt: "Lifejacket inspection service" },
+    { src: "/main-assets/image/lse-3.jpg", alt: "Breathing apparatus service" },
+    { src: "/main-assets/image/lse-4.jpg", alt: "Immersion suit inspection" },
+    { src: "/main-assets/image/lse-5.jpg", alt: "EEBD emergency escape breathing apparatus" }
   ];
 
   return (
@@ -57,15 +53,15 @@ export default function LSEServiceFinlandPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <HeaderFour />
-      <Breadcumb title="LSE SERVICE FINLAND" bgImage="/main-assets/image/services-bg.jpg" />
+      <Breadcumb title="LSE SERVICE" bgImage="/main-assets/image/services-bg.jpg" />
       <div className="service-area-2 overflow-hidden shape-mockup-wrap background-image" style={{ backgroundImage: "url('/main-assets/img/bg/service-bg1-1.png')" }}>
         <div className="container" style={{ marginTop: '50px', marginBottom: '50px' }}>
           <div className="row">
             <div className="col-12">
-              <h1 className="sec-title mb-4">LSE Service Finland</h1>
+              <h1 className="sec-title mb-4">LSE Service</h1>
               <p className="mb-4" style={{ fontSize: '18px', lineHeight: '1.8' }}>
-                Task-in Services provides comprehensive Life Saving Equipment (LSE) services throughout Finland. 
-                Our certified technicians inspect and maintain all life-saving equipment to ensure compliance 
+                Task-in Services provides comprehensive Life Saving Equipment (LSE) services for marine vessels.
+                Our certified technicians inspect and maintain all life-saving equipment to ensure compliance
                 with international maritime safety standards.
               </p>
             </div>
@@ -113,4 +109,3 @@ export default function LSEServiceFinlandPage() {
     </>
   );
 }
-

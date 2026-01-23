@@ -23,17 +23,13 @@ export default function FireExtinguisherMaintenancePage() {
     "@context": "https://schema.org",
     "@type": "Service",
     "serviceType": "Fire Extinguisher Maintenance Service",
-    "name": "Fire Extinguisher Maintenance Finland",
-    "description": "Professional fire extinguisher maintenance, inspection, testing, and refilling services for marine vessels in Finland. Our certified technicians provide comprehensive fire extinguisher services including hydrostatic pressure testing, refilling, and compliance inspections.",
+    "name": "Fire Extinguisher Maintenance",
+    "description": "Professional fire extinguisher maintenance, inspection, testing, and refilling services for marine vessels. Our certified technicians provide comprehensive fire extinguisher services including hydrostatic pressure testing, refilling, and compliance inspections.",
     "provider": {
       "@type": "Organization",
       "name": "Task-in Services",
       "url": siteUrl,
       "logo": `${siteUrl}/main-assets/img/logo.svg`
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "Finland"
     },
     "availableChannel": {
       "@type": "ServiceChannel",
@@ -42,12 +38,12 @@ export default function FireExtinguisherMaintenancePage() {
   };
 
   const images = [
-    { src: "/main-assets/image/ffe-9.jpg", alt: "Fire extinguisher maintenance service Finland marine vessels" },
-    { src: "/main-assets/image/ffe-10.jpg", alt: "Portable fire extinguisher inspection and testing Finland" },
-    { src: "/main-assets/image/ffe-11.jpg", alt: "Fire extinguisher refilling service Finland" },
-    { src: "/main-assets/image/ffe-12.jpg", alt: "Marine fire extinguisher hydrostatic testing Finland" },
-    { src: "/main-assets/image/ffe-13.jpg", alt: "Stationary fire extinguisher maintenance Finland" },
-    { src: "/main-assets/image/ffe-14.jpg", alt: "Fire extinguisher compliance inspection Finland" }
+    { src: "/main-assets/image/ffe-9.jpg", alt: "Fire extinguisher maintenance service marine vessels" },
+    { src: "/main-assets/image/ffe-10.jpg", alt: "Portable fire extinguisher inspection and testing" },
+    { src: "/main-assets/image/ffe-11.jpg", alt: "Fire extinguisher refilling service" },
+    { src: "/main-assets/image/ffe-12.jpg", alt: "Marine fire extinguisher hydrostatic testing" },
+    { src: "/main-assets/image/ffe-13.jpg", alt: "Stationary fire extinguisher maintenance" },
+    { src: "/main-assets/image/ffe-14.jpg", alt: "Fire extinguisher compliance inspection" }
   ];
 
   return (
@@ -63,10 +59,10 @@ export default function FireExtinguisherMaintenancePage() {
         <div className="container" style={{ marginTop: '50px', marginBottom: '50px' }}>
           <div className="row">
             <div className="col-12">
-              <h1 className="sec-title mb-4">Fire Extinguisher Maintenance Finland</h1>
+              <h1 className="sec-title mb-4">Fire Extinguisher Maintenance</h1>
               <p className="mb-4" style={{ fontSize: '18px', lineHeight: '1.8' }}>
-                Task-in Services offers professional fire extinguisher maintenance and inspection services 
-                throughout Finland. Our certified technicians ensure your fire extinguishers are properly 
+                Task-in Services offers professional fire extinguisher maintenance and inspection services
+                for marine vessels. Our certified technicians ensure your fire extinguishers are properly
                 maintained, tested, and compliant with all international maritime safety regulations.
               </p>
             </div>

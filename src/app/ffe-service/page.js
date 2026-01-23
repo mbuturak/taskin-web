@@ -18,12 +18,12 @@ import "~/public/main-assets/css/slick.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export default function FFEServiceFinlandPage() {
+export default function FFEServicePage() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
     "serviceType": "Fire Fighting Equipment Service",
-    "name": "FFE Service Finland",
+    "name": "FFE Service",
     "description": "Complete marine firefighting packages, inspection of HP & LP Co2 systems, foam systems and foam concentrates analysis and supplies, portable foam applicators, alternative gas systems as Novec, FM200, Ansul, portable and stationary fire extinguishers, dry powder systems, humidity analysis, galley Co2 and deep fat fryer systems, smoke detection systems, fire alarm systems, gaseous fire suppression systems, fire detection systems, smoke and heat detection systems, accommodation and engine water mist systems, hydrostatic pressure testing and refilling of cylinders, 5-yearly, 10-yearly and 20-yearly inspections and repairs, internal valve inspections",
     "provider": {
       "@type": "Organization",
@@ -31,23 +31,19 @@ export default function FFEServiceFinlandPage() {
       "url": siteUrl,
       "logo": `${siteUrl}/main-assets/img/logo.svg`
     },
-    "areaServed": {
-      "@type": "Country",
-      "name": "Finland"
-    },
     "availableChannel": {
       "@type": "ServiceChannel",
-      "serviceUrl": `${siteUrl}/ffe-service-finland`
+      "serviceUrl": `${siteUrl}/ffe-service`
     }
   };
 
   const images = [
-    { src: "/main-assets/image/ffe2.jpg", alt: "FFE fire fighting equipment service Finland marine safety" },
-    { src: "/main-assets/image/ffe-2.jpg", alt: "Fire extinguisher maintenance and inspection Finland" },
-    { src: "/main-assets/image/ffe-3.jpg", alt: "Co2 fire suppression system service Finland" },
-    { src: "/main-assets/image/ffe-4.jpg", alt: "Foam fire fighting system inspection Finland" },
-    { src: "/main-assets/image/ffe-7.jpg", alt: "Marine fire detection system service Finland" },
-    { src: "/main-assets/image/ffe-8.jpg", alt: "Portable fire extinguisher testing Finland" }
+    { src: "/main-assets/image/ffe2.jpg", alt: "FFE fire fighting equipment service marine safety" },
+    { src: "/main-assets/image/ffe-2.jpg", alt: "Fire extinguisher maintenance and inspection" },
+    { src: "/main-assets/image/ffe-3.jpg", alt: "Co2 fire suppression system service" },
+    { src: "/main-assets/image/ffe-4.jpg", alt: "Foam fire fighting system inspection" },
+    { src: "/main-assets/image/ffe-7.jpg", alt: "Marine fire detection system service" },
+    { src: "/main-assets/image/ffe-8.jpg", alt: "Portable fire extinguisher testing" }
   ];
 
   return (
@@ -58,15 +54,15 @@ export default function FFEServiceFinlandPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <HeaderFour />
-      <Breadcumb title="FFE SERVICE FINLAND" bgImage="/main-assets/image/services-bg.jpg" />
+      <Breadcumb title="FFE SERVICE" bgImage="/main-assets/image/services-bg.jpg" />
       <div className="service-area-2 overflow-hidden shape-mockup-wrap background-image" style={{ backgroundImage: "url('/main-assets/img/bg/service-bg1-1.png')" }}>
         <div className="container" style={{ marginTop: '50px', marginBottom: '50px' }}>
           <div className="row">
             <div className="col-12">
-              <h1 className="sec-title mb-4">FFE Service Finland</h1>
+              <h1 className="sec-title mb-4">FFE Service</h1>
               <p className="mb-4" style={{ fontSize: '18px', lineHeight: '1.8' }}>
-                Task-in Services provides comprehensive Fire Fighting Equipment (FFE) services throughout Finland. 
-                Our certified technicians deliver complete marine firefighting packages, ensuring your vessel meets 
+                Task-in Services provides comprehensive Fire Fighting Equipment (FFE) services for marine vessels.
+                Our certified technicians deliver complete marine firefighting packages, ensuring your vessel meets
                 all international safety standards and regulations.
               </p>
             </div>
@@ -123,4 +119,3 @@ export default function FFEServiceFinlandPage() {
     </>
   );
 }
-

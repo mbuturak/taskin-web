@@ -23,17 +23,13 @@ export default function LSALifeboatServicePage() {
     "@context": "https://schema.org",
     "@type": "Service",
     "serviceType": "Life Saving Appliance Service",
-    "name": "LSA Lifeboat Service Finland",
-    "description": "Inspection of lifeboats, freefalls and rescue boats annually and 5-yearly, release hook inspection and services, wire replacements with multi-brand OEM and service provider approvals in Finland.",
+    "name": "LSA Lifeboat Service",
+    "description": "Inspection of lifeboats, freefalls and rescue boats annually and 5-yearly, release hook inspection and services, wire replacements with multi-brand OEM and service provider approvals.",
     "provider": {
       "@type": "Organization",
       "name": "Task-in Services",
       "url": siteUrl,
       "logo": `${siteUrl}/main-assets/img/logo.svg`
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "Finland"
     },
     "availableChannel": {
       "@type": "ServiceChannel",
@@ -42,12 +38,12 @@ export default function LSALifeboatServicePage() {
   };
 
   const images = [
-    { src: "/main-assets/image/lsa.jpeg", alt: "LSA lifeboat service Finland marine safety inspection" },
-    { src: "/main-assets/image/lsa-2.jpg", alt: "Lifeboat inspection and maintenance service Finland" },
-    { src: "/main-assets/image/lsa-3.jpg", alt: "Rescue boat service Finland marine vessels" },
-    { src: "/main-assets/image/lsa-4.jpg", alt: "Lifeboat release hook inspection Finland" },
-    { src: "/main-assets/image/lsa-5.jpg", alt: "Freefall lifeboat service Finland" },
-    { src: "/main-assets/image/lsa-6.jpg", alt: "LSA wire replacement service Finland" }
+    { src: "/main-assets/image/lsa.jpeg", alt: "LSA lifeboat service marine safety inspection" },
+    { src: "/main-assets/image/lsa-2.jpg", alt: "Lifeboat inspection and maintenance service" },
+    { src: "/main-assets/image/lsa-3.jpg", alt: "Rescue boat service marine vessels" },
+    { src: "/main-assets/image/lsa-4.jpg", alt: "Lifeboat release hook inspection" },
+    { src: "/main-assets/image/lsa-5.jpg", alt: "Freefall lifeboat service" },
+    { src: "/main-assets/image/lsa-6.jpg", alt: "LSA wire replacement service" }
   ];
 
   return (
@@ -58,15 +54,15 @@ export default function LSALifeboatServicePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <HeaderFour />
-      <Breadcumb title="LSA LIFEBOAT SERVICE FINLAND" bgImage="/main-assets/image/services-bg.jpg" />
+      <Breadcumb title="LSA LIFEBOAT SERVICE" bgImage="/main-assets/image/services-bg.jpg" />
       <div className="service-area-2 overflow-hidden shape-mockup-wrap background-image" style={{ backgroundImage: "url('/main-assets/img/bg/service-bg1-1.png')" }}>
         <div className="container" style={{ marginTop: '50px', marginBottom: '50px' }}>
           <div className="row">
             <div className="col-12">
-              <h1 className="sec-title mb-4">LSA Lifeboat Service Finland</h1>
+              <h1 className="sec-title mb-4">LSA Lifeboat Service</h1>
               <p className="mb-4" style={{ fontSize: '18px', lineHeight: '1.8' }}>
-                Task-in Services provides comprehensive Life Saving Appliance (LSA) services for lifeboats 
-                and rescue boats throughout Finland. Our certified technicians perform annual and 5-yearly 
+                Task-in Services provides comprehensive Life Saving Appliance (LSA) services for lifeboats
+                and rescue boats. Our certified technicians perform annual and 5-yearly
                 inspections, ensuring your life-saving equipment meets all SOLAS requirements.
               </p>
             </div>
